@@ -16,5 +16,14 @@ namespace BTL.GUI
         {
             InitializeComponent();
         }
+
+        static DAL.Connection.clsConnect connection = new DAL.Connection.clsConnect(@"ACER-NITRO-5\SQLEXPRESS", "BTL_QLBH", "sa", "123456@Ab");
+        // string strConnection = $@"Data Source=ACER-NITRO-5\SQLEXPRESS;Initial Catalog=BTL_QLBH;User ID =sa;Password=123456@Ab";
+        public string strConnection = connection.getConectionString();
+
+        private void formDoanhThu_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(strConnection);
+        }
     }
 }

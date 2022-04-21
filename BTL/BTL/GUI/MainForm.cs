@@ -14,6 +14,7 @@ namespace BTL.GUI
 {
     public partial class MainForm : Form
     {
+        public string strConnection;
         //Khởi tạo các đối tượng trỏ đến form
         formHangHoa frHangHoa = new formHangHoa();
         nhanvienPanel frNhanVien = new nhanvienPanel();

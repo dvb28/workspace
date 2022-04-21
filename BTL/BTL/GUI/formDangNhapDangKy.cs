@@ -249,7 +249,7 @@ namespace BTL
             }
         }
         //Tạo đối tượng từ lớp getTaiKhoan để lấy dữ liệu từ BUS vào GUI
-        BUS.getTaiKhoan userInfor = new BUS.getTaiKhoan();
+        //BUS.getTaiKhoan userInfor = new BUS.getTaiKhoan();
         /*Hàm kiểm tra xem các TextBox có còn trống hay không, và có đúng thông tin đăng nhập hay không, nếu còn trống hoặc sai thông tin sẽ in
          thông báo lỗi, nếu đúng thông tin và TextBox không trống thì sẽ đăng nhập thành công*/
         private void Validate(List<BunifuTextBox> thisListBox, List<BunifuUserControl> thisUserControl, List<BunifuLabel> thisErrorMessage, int start, int end, string style)
@@ -263,7 +263,7 @@ namespace BTL
                 } else if(thisListBox[i].Text != "" && style == "login")
                 {
                     //Lấy thông tin user từ dữ liệu đã lấy trên Database và check
-                    DataTable table = userInfor.getUserInfo();
+                    DataTable table = new DataTable(); //BUS.clsBridge_BUS.showHangHoa();
                     foreach (DataRow row in table.Rows)
                     {
                         string tempName = row["TenTaiKhoan"].ToString();

@@ -149,17 +149,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\clsClass\getTaiKhoan.cs" />
-    <Compile Include="DAL\clsClass\clsConnect.cs" />
-    <Compile Include="BUS\clsClass\clsHoaDon.cs" />
-    <Compile Include="BUS\clsClass\clsKhachHang.cs" />
-    <Compile Include="BUS\clsClass\clsNhanVien.cs" />
-    <Compile Include="BUS\clsClass\clsSanPham.cs" />
-    <Compile Include="DAL\Interface\IConnect.cs" />
+    <Compile Include="BUS\clsBridge_BUS.cs" />
+    <Compile Include="DAL\clsHangHoa_DAL.cs" />
+    <Compile Include="DAL\clsHoaDon_DAL.cs" />
+    <Compile Include="DAL\clsKhachHang_DAL.cs" />
+    <Compile Include="DAL\clsNhanVien_DAL.cs" />
+    <Compile Include="DAL\Connection\clsConnect.cs" />
+    <Compile Include="DAL\Interface\IHangHoa.cs" />
     <Compile Include="DAL\Interface\IHoaDon.cs" />
     <Compile Include="DAL\Interface\IKhachHang.cs" />
     <Compile Include="DAL\Interface\INhanVien.cs" />
-    <Compile Include="DAL\Interface\ISanPham.cs" />
     <Compile Include="GUI\formHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +194,30 @@
     </Compile>
     <Compile Include="GUI\formDoanhThu.Designer.cs">
       <DependentUpon>formDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrHangHoa.Designer.cs">
+      <DependentUpon>isrHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrHoaDon.Designer.cs">
+      <DependentUpon>isrHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrKhachHang.Designer.cs">
+      <DependentUpon>isrKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Insert Form\isrNhanVien.Designer.cs">
+      <DependentUpon>isrNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>

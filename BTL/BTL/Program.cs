@@ -22,8 +22,8 @@ namespace BTL
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formDangNhapDangKy());
-            //Application.Run(new GUI.MainForm());
+            //Application.Run(new formDangNhapDangKy());
+            Application.Run(new GUI.MainForm());
         }
     }
 }

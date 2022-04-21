@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BTL.Util
+namespace BTL.Ultil
 {
-    public class Util
+    public class Ultil
     {
         public static int ExecuteProcedure(string[] paras, object[] values, string strConnection, string sp_name)
         {

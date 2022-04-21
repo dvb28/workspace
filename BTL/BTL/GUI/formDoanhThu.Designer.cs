@@ -241,7 +241,7 @@
             this.trangchuBtn.onHoverState.BorderThickness = 1;
             this.trangchuBtn.onHoverState.FillColor = System.Drawing.Color.White;
             this.trangchuBtn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.trangchuBtn.onHoverState.IconLeftImage = global::BTL.Properties.Resources.home_color;
+            this.trangchuBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage2")));
             this.trangchuBtn.onHoverState.IconRightImage = null;
             this.trangchuBtn.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.trangchuBtn.OnIdleState.BorderRadius = 1;
@@ -257,7 +257,7 @@
             this.trangchuBtn.OnPressedState.BorderThickness = 1;
             this.trangchuBtn.OnPressedState.FillColor = System.Drawing.Color.White;
             this.trangchuBtn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.trangchuBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage2")));
+            this.trangchuBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage3")));
             this.trangchuBtn.OnPressedState.IconRightImage = null;
             this.trangchuBtn.Size = new System.Drawing.Size(112, 43);
             this.trangchuBtn.TabIndex = 19;
@@ -331,7 +331,7 @@
             this.hanghoaBtn.onHoverState.BorderThickness = 1;
             this.hanghoaBtn.onHoverState.FillColor = System.Drawing.Color.White;
             this.hanghoaBtn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.hanghoaBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage3")));
+            this.hanghoaBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage4")));
             this.hanghoaBtn.onHoverState.IconRightImage = null;
             this.hanghoaBtn.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.hanghoaBtn.OnIdleState.BorderRadius = 1;
@@ -347,7 +347,7 @@
             this.hanghoaBtn.OnPressedState.BorderThickness = 1;
             this.hanghoaBtn.OnPressedState.FillColor = System.Drawing.Color.White;
             this.hanghoaBtn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.hanghoaBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage4")));
+            this.hanghoaBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage5")));
             this.hanghoaBtn.OnPressedState.IconRightImage = null;
             this.hanghoaBtn.Size = new System.Drawing.Size(112, 43);
             this.hanghoaBtn.TabIndex = 20;
@@ -421,7 +421,7 @@
             this.hoadonBtn.onHoverState.BorderThickness = 1;
             this.hoadonBtn.onHoverState.FillColor = System.Drawing.Color.White;
             this.hoadonBtn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.hoadonBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage5")));
+            this.hoadonBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage6")));
             this.hoadonBtn.onHoverState.IconRightImage = null;
             this.hoadonBtn.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.hoadonBtn.OnIdleState.BorderRadius = 1;
@@ -437,7 +437,7 @@
             this.hoadonBtn.OnPressedState.BorderThickness = 1;
             this.hoadonBtn.OnPressedState.FillColor = System.Drawing.Color.White;
             this.hoadonBtn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.hoadonBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage6")));
+            this.hoadonBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage7")));
             this.hoadonBtn.OnPressedState.IconRightImage = null;
             this.hoadonBtn.Size = new System.Drawing.Size(112, 43);
             this.hoadonBtn.TabIndex = 23;
@@ -511,7 +511,7 @@
             this.nhanhvienBtn.onHoverState.BorderThickness = 1;
             this.nhanhvienBtn.onHoverState.FillColor = System.Drawing.Color.White;
             this.nhanhvienBtn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.nhanhvienBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage7")));
+            this.nhanhvienBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage8")));
             this.nhanhvienBtn.onHoverState.IconRightImage = null;
             this.nhanhvienBtn.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.nhanhvienBtn.OnIdleState.BorderRadius = 1;
@@ -527,7 +527,7 @@
             this.nhanhvienBtn.OnPressedState.BorderThickness = 1;
             this.nhanhvienBtn.OnPressedState.FillColor = System.Drawing.Color.White;
             this.nhanhvienBtn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.nhanhvienBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage8")));
+            this.nhanhvienBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage9")));
             this.nhanhvienBtn.OnPressedState.IconRightImage = null;
             this.nhanhvienBtn.Size = new System.Drawing.Size(115, 43);
             this.nhanhvienBtn.TabIndex = 21;
@@ -601,7 +601,7 @@
             this.khachhangBtn.onHoverState.BorderThickness = 1;
             this.khachhangBtn.onHoverState.FillColor = System.Drawing.Color.White;
             this.khachhangBtn.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.khachhangBtn.onHoverState.IconLeftImage = global::BTL.Properties.Resources.khachhang_color;
+            this.khachhangBtn.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage10")));
             this.khachhangBtn.onHoverState.IconRightImage = null;
             this.khachhangBtn.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.khachhangBtn.OnIdleState.BorderRadius = 1;
@@ -617,7 +617,7 @@
             this.khachhangBtn.OnPressedState.BorderThickness = 1;
             this.khachhangBtn.OnPressedState.FillColor = System.Drawing.Color.White;
             this.khachhangBtn.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(250)))));
-            this.khachhangBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage9")));
+            this.khachhangBtn.OnPressedState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("resource.IconLeftImage11")));
             this.khachhangBtn.OnPressedState.IconRightImage = null;
             this.khachhangBtn.Size = new System.Drawing.Size(112, 43);
             this.khachhangBtn.TabIndex = 22;
@@ -651,6 +651,7 @@
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Name = "formDoanhThu";
             this.Text = "frDoanhThu";
+            this.Load += new System.EventHandler(this.formDoanhThu_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).EndInit();
             this.ResumeLayout(false);
