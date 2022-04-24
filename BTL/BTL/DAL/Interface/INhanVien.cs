@@ -14,7 +14,6 @@ namespace BTL.DAL.Interface
         string TenNV { get; set; }
         string SDT { get; set; }
         string DiaChi { get; set; }
-        int DoanhSo { get; set; }
         //Các phương thức
         //Phương thức Get
         DataTable Get(string strSqlConnection);
@@ -22,5 +21,7 @@ namespace BTL.DAL.Interface
         int Add(string strSqlConnection);
         //Phương thức Xóa
         int Remove(string strSqlConnection);
+        //Phuong thức Tìm Kiếm
+        DataTable Search(string strSqlConnection, string searchContent);
     }
 }

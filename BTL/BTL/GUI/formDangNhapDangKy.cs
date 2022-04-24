@@ -263,7 +263,7 @@ namespace BTL
                 } else if(thisListBox[i].Text != "" && style == "login")
                 {
                     //Lấy thông tin user từ dữ liệu đã lấy trên Database và check
-                    DataTable table = new DataTable(); //BUS.clsBridge_BUS.showHangHoa();
+                    DataTable table = new DataTable();
                     foreach (DataRow row in table.Rows)
                     {
                         string tempName = row["TenTaiKhoan"].ToString();

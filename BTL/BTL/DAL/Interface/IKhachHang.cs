@@ -22,5 +22,7 @@ namespace BTL.DAL.Interface
         int Add(string strSqlConnection);
         //Phương thức Xóa
         int Remove(string strSqlConnection);
+        //Phuong thức Tìm Kiếm
+        DataTable Search(string strSqlConnection, string searchContent);
     }
 }

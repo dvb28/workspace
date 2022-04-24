@@ -19,9 +19,37 @@ namespace BTL.GUI
             InitializeComponent();
         }
 
-        private void nhanvienPanel_Load(object sender, EventArgs e)
-        {
-            clsNhanVien_BUS.showHoaDon(nhanvienTable);
+        //Đổ dữ liệu vào trong DataGridView
+        public void loadDataGrid() {
+            clsNhanVien_BUS.showNhanVien(nhanvienTable);
+        }
+
+        //Tìm kiếm
+        private void nhanvienSearchBtn_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(nhanvienSearch.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã hàng cần tìm", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                nhanvienSearch.Focus();
+            } else
+            {
+                if (clsNhanVien_BUS.searchNhanVien(nhanvienTable, nhanvienSearch.Text) == -1)
+                {
+                    MessageBox.Show($"Mã hàng '{nhanvienSearch.Text}' không tồn tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    nhanvienSearch.Focus();
+                }
+            }
+        }
+
+        private void nhanvienSearch_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter)
+            {
+                nhanvienSearchBtn.PerformClick();
+            }
+        }
+
+        private void hanghoaThemBtn_Click(object sender, EventArgs e) {
+            GUI.InsertForm.isrNhanVien isrNhanVien = new GUI.InsertForm.isrNhanVien(nhanvienTable);
+            isrNhanVien.ShowDialog();
         }
     }
 }

@@ -34,8 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    <Reference Include="Aspose.Words, Version=14.11.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.14.11.0\lib\net3.5-client\Aspose.Words.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bunifu.Charts.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.0.1\lib\Bunifu.Charts.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
@@ -138,6 +142,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -195,28 +200,28 @@
     <Compile Include="GUI\formDoanhThu.Designer.cs">
       <DependentUpon>formDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrHangHoa.cs">
+    <Compile Include="GUI\InsertForm\isrHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrHangHoa.Designer.cs">
+    <Compile Include="GUI\InsertForm\isrHangHoa.Designer.cs">
       <DependentUpon>isrHangHoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrHoaDon.cs">
+    <Compile Include="GUI\InsertForm\isrHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrHoaDon.Designer.cs">
+    <Compile Include="GUI\InsertForm\isrHoaDon.Designer.cs">
       <DependentUpon>isrHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrKhachHang.cs">
+    <Compile Include="GUI\InsertForm\isrKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrKhachHang.Designer.cs">
+    <Compile Include="GUI\InsertForm\isrKhachHang.Designer.cs">
       <DependentUpon>isrKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrNhanVien.cs">
+    <Compile Include="GUI\InsertForm\isrNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Insert Form\isrNhanVien.Designer.cs">
+    <Compile Include="GUI\InsertForm\isrNhanVien.Designer.cs">
       <DependentUpon>isrNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainForm.cs">
@@ -231,6 +236,7 @@
     <Compile Include="GUI\formDangNhapDangKy.Designer.cs">
       <DependentUpon>formDangNhapDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lib\ReportExtensionMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ultil\Ultil.cs" />
@@ -252,6 +258,18 @@
     <EmbeddedResource Include="GUI\formNhanVien.resx">
       <DependentUpon>formNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InsertForm\isrHangHoa.resx">
+      <DependentUpon>isrHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InsertForm\isrHoaDon.resx">
+      <DependentUpon>isrHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InsertForm\isrKhachHang.resx">
+      <DependentUpon>isrKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InsertForm\isrNhanVien.resx">
+      <DependentUpon>isrNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +288,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="CrystalReport\ReportSample\Mau_Bao_Cao.doc" />
+    <None Include="CrystalReport\ReportSample\TRIOSHOP.doc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -287,9 +307,7 @@
   <ItemGroup>
     <None Include="Resources\Eyes-FillNoColor.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CrytalReport\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Img\Bg1.png" />
     <Content Include="Img\Bg2.png" />

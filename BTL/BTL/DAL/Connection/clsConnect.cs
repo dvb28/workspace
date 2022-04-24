@@ -41,7 +41,6 @@ namespace BTL.DAL.Connection
             connect.Dispose();
         }
         //Tạo chuỗi kết nối{
-            // $@"Data Source = {Server}; Initial Catalog = {Database}; User ID = {UserID}; Password = {Password}";
         public string getConectionString()
         {
             string strConnection;

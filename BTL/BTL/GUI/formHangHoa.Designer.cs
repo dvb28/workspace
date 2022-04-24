@@ -753,6 +753,7 @@
             this.hanghoaSearch.TextPlaceholder = "Tìm kiếm";
             this.hanghoaSearch.UseSystemPasswordChar = false;
             this.hanghoaSearch.WordWrap = true;
+            this.hanghoaSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.hanghoaSearch_KeyDown);
             // 
             // hanghoaSearchBtn
             // 
@@ -842,6 +843,7 @@
             this.hanghoaSearchBtn.TextMarginLeft = 0;
             this.hanghoaSearchBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.hanghoaSearchBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaSearchBtn.Click += new System.EventHandler(this.hanghoaSearchBtn_Click);
             // 
             // hanghoaPanel
             // 
@@ -1190,6 +1192,7 @@
             this.hanghoaLuuBtn.TextMarginLeft = 0;
             this.hanghoaLuuBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.hanghoaLuuBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaLuuBtn.Click += new System.EventHandler(this.hanghoaLuuBtn_Click);
             // 
             // hanghoaThemBtn
             // 
@@ -1279,6 +1282,7 @@
             this.hanghoaThemBtn.TextMarginLeft = 0;
             this.hanghoaThemBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.hanghoaThemBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaThemBtn.Click += new System.EventHandler(this.hanghoaThemBtn_Click);
             // 
             // hanghoaXoaBtn
             // 
@@ -1368,6 +1372,7 @@
             this.hanghoaXoaBtn.TextMarginLeft = 0;
             this.hanghoaXoaBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.hanghoaXoaBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaXoaBtn.Click += new System.EventHandler(this.hanghoaXoaBtn_Click);
             // 
             // hanghoaTable
             // 
@@ -1425,6 +1430,7 @@
             this.hanghoaTable.Location = new System.Drawing.Point(42, 122);
             this.hanghoaTable.Margin = new System.Windows.Forms.Padding(15, 20, 10, 20);
             this.hanghoaTable.Name = "hanghoaTable";
+            this.hanghoaTable.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -1470,7 +1476,6 @@
             this.Controls.Add(this.hanghoaPanel);
             this.Name = "formHangHoa";
             this.Text = "formHangHoa";
-            this.Load += new System.EventHandler(this.formHangHoa_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).EndInit();
             this.hanghoaPanel.ResumeLayout(false);

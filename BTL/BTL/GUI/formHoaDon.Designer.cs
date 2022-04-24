@@ -75,6 +75,7 @@
             this.hanghoaThemBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.hanghoaXoaBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).BeginInit();
             this.hoadonPanel.SuspendLayout();
@@ -749,6 +750,7 @@
             this.hoadonSearchBtn.TextMarginLeft = 0;
             this.hoadonSearchBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.hoadonSearchBtn.UseDefaultRadiusAndThickness = true;
+            this.hoadonSearchBtn.Click += new System.EventHandler(this.hoadonSearchBtn_Click);
             // 
             // hoadonSearch
             // 
@@ -825,6 +827,7 @@
             this.hoadonSearch.TextPlaceholder = "Tìm kiếm";
             this.hoadonSearch.UseSystemPasswordChar = false;
             this.hoadonSearch.WordWrap = true;
+            this.hoadonSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.hoadonSearch_KeyDown);
             // 
             // bunifuLabel1
             // 
@@ -936,7 +939,7 @@
             this.xuatHoaDon.OnIdleState.BorderThickness = 1;
             this.xuatHoaDon.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
             this.xuatHoaDon.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.xuatHoaDon.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuathoadonBtn.OnIdleState.IconLeftImage")));
+            this.xuatHoaDon.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuatHoaDon.OnIdleState.IconLeftImage")));
             this.xuatHoaDon.OnIdleState.IconRightImage = null;
             this.xuatHoaDon.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.xuatHoaDon.OnPressedState.BorderRadius = 10;
@@ -953,6 +956,7 @@
             this.xuatHoaDon.TextMarginLeft = 0;
             this.xuatHoaDon.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.xuatHoaDon.UseDefaultRadiusAndThickness = true;
+            this.xuatHoaDon.Click += new System.EventHandler(this.xuatHoaDon_Click);
             // 
             // hoadonPanelSub
             // 
@@ -1194,6 +1198,7 @@
             // hoadonTable
             // 
             this.hoadonTable.AllowCustomTheming = false;
+            this.hoadonTable.AllowUserToAddRows = false;
             this.hoadonTable.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -1212,6 +1217,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.hoadonTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hoadonTable.ColumnHeadersHeight = 40;
+            this.hoadonTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -1246,6 +1253,7 @@
             this.hoadonTable.Location = new System.Drawing.Point(42, 122);
             this.hoadonTable.Margin = new System.Windows.Forms.Padding(15, 20, 10, 20);
             this.hoadonTable.Name = "hoadonTable";
+            this.hoadonTable.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -1262,8 +1270,7 @@
             this.hoadonTable.Size = new System.Drawing.Size(1029, 453);
             this.hoadonTable.TabIndex = 29;
             this.hoadonTable.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // hanghoaThemBtn
+           
             // 
             this.hanghoaThemBtn.AllowAnimations = true;
             this.hanghoaThemBtn.AllowMouseEffects = true;
@@ -1351,6 +1358,7 @@
             this.hanghoaThemBtn.TextMarginLeft = 0;
             this.hanghoaThemBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.hanghoaThemBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaThemBtn.Click += new System.EventHandler(this.hanghoaThemBtn_Click);
             // 
             // hanghoaXoaBtn
             // 
@@ -1455,6 +1463,13 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(209, 65);
             this.bunifuPanel2.TabIndex = 28;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // formHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1469,7 +1484,6 @@
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Name = "formHoaDon";
             this.Text = "formHoaDon";
-            this.Load += new System.EventHandler(this.formHoaDon_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).EndInit();
             this.hoadonPanel.ResumeLayout(false);
@@ -1511,5 +1525,6 @@
         private Bunifu.UI.WinForms.BunifuLabel hoadonPanelSub;
         private Bunifu.UI.WinForms.BunifuLabel hoadonPanelTitle;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 xuatHoaDon;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }

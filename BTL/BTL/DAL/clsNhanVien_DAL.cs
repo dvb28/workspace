@@ -14,25 +14,32 @@ namespace BTL.DAL.clsNhanVien_DAL
         public string TenNV { get; set; }
         public string SDT { get; set; }
         public string DiaChi { get; set; }
-        public int DoanhSo { get; set; }
+        //Hàm khởi tạo không tham số
+        public clsNhanVien_DAL() { }
+        //Hàm khởi tạo không tham số
+        public clsNhanVien_DAL(string _maNV, string _tenNV, string _SDT, string _diaChi) {
+            this.MaNV = _maNV;
+            this.TenNV = _tenNV;
+            this.SDT = _SDT;
+            this.DiaChi = _diaChi;
+        }
 
+        //Hàm khởi tạo có tham số
         //Các phương thức Implement từ Interface
 
         public int Add(string strSqlConnection)
         {
-            throw new NotImplementedException();
             return Ultil.Ultil.ExecuteProcedure(
-            new string[] { "@MaNV", "@TenNV", "@SDT", "@DiaChi", "@DoanhSo"},
-            new object[] { MaNV, TenNV, SDT, DiaChi, DoanhSo},
-            strSqlConnection, "usp_insertNhanVien");
+            new string[] { "@MaNV", "@TenNV", "@SDT", "@DiaChi"},
+            new object[] { MaNV, TenNV, SDT, DiaChi},
+            strSqlConnection, "sp_insertNhanVien");
         }
 
         public DataTable Get(string strSqlConnection)
         {
-            throw new NotImplementedException();
             SqlConnection conn = new SqlConnection(strSqlConnection);
             conn.Open();
-            string sql = "SELECT * FROM NhanVien";
+            string sql = "sp_showNhanVien";
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -45,11 +52,30 @@ namespace BTL.DAL.clsNhanVien_DAL
 
         public int Remove(string strSqlConnection)
         {
-            throw new NotImplementedException();
             return Ultil.Ultil.ExecuteProcedure(
             new string[] { "@MaNV", "@TenNV", "@SDT", "@DiaChi", "@DoanhSo" },
-            new object[] { MaNV, TenNV, SDT, DiaChi, DoanhSo },
-            strSqlConnection, "usp_deleteNhanVien");
+            new object[] { MaNV, TenNV, SDT, DiaChi},
+            strSqlConnection, "sp_deleteNhanVien");
         }
+
+        //Phương thức tìm kiếm sử dụng Procedure
+        public DataTable Search(string strSqlConnection, string searchContent) {
+            SqlConnection conn = new SqlConnection(strSqlConnection);
+            conn.Open();
+            string sql = "EXEC sp_selectNhanVien'" + searchContent + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            da.Dispose();
+            conn.Close();
+            conn.Dispose();
+            if (table == null)
+            {
+                table = null;
+            }
+            return table;
+        }
+
     }
 }

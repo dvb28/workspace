@@ -17,8 +17,17 @@ namespace BTL.DAL.clsHangHoa_DAL
         public string TenHang { get; set; } 
         public int Gia { get; set; }
         public int SoLuong { get; set; }
-
-
+        //Hàm khởi tạo không tham số
+        public clsHangHoa_DAL() { }
+        //Hàm khởi tạo có tham số
+        public clsHangHoa_DAL(string _maHang, string _tenHang, string _loai, string _nhaCC, int _gia, int _soLuong) {
+            MaHang = _maHang;
+            TenHang = _tenHang;
+            MaLoai = _loai;
+            MaNCC = _nhaCC;
+            Gia = _gia;
+            SoLuong = _soLuong;
+        }
         //Các phương thức
         //Phương thức Thêm sử dụng Procedure
         public int Add(string strSqlConnection)
@@ -26,14 +35,14 @@ namespace BTL.DAL.clsHangHoa_DAL
             return Ultil.Ultil.ExecuteProcedure(
             new string[] { "@MaHang", "@MaLoai", "@MaNCC", "@TenHang", "@Gia", "@SoLuong" },
             new object[] { MaHang, MaLoai, MaNCC, TenHang, Gia, SoLuong },
-            strSqlConnection, "usp_insertHangHoa");
+            strSqlConnection, "sp_insertHangHoa");
         }
         //Phương thức Lấy dữ liệu sử dụng Procedure
 
         public DataTable Get(string strSqlConnection) {
             SqlConnection conn = new SqlConnection(strSqlConnection);
             conn.Open();
-            string sql = "SELECT * FROM HangHoa";
+            string sql = "sp_showHangHoa";
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -45,15 +54,31 @@ namespace BTL.DAL.clsHangHoa_DAL
         }
         //Phương thức Xóa sử dụng Procedure
 
-        public int Remove(string strSqlConnection)
+        public int Remove(string strSqlConnection, string rmID)
         {
-            return BTL.Ultil.Ultil.ExecuteProcedure(
-            new string[] { "@MaHang", "@MaLoai", "@MaNCC", "@TenHang", "@Gia", "@SoLuong" },
-            new object[] { MaHang, MaLoai, MaNCC, TenHang, Gia, SoLuong },
-            strSqlConnection, "usp_deleteHangHoa");
+            return Ultil.Ultil.ExecuteProcedure(
+            new string[] { "@MaHang"},
+            new object[] { MaHang},
+            strSqlConnection, "sp_deleteHangHoa");
         }
 
-
-        //Phương thức tìm kiếm sử dụng Procedure
+        //Phương thức tìm kiếm sử dụng
+        public DataTable Search(string strSqlConnection, string searchContent) {
+            SqlConnection conn = new SqlConnection(strSqlConnection);
+            conn.Open();
+            string sql = "EXEC sp_selectHangHoa'" + searchContent + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            da.Dispose();
+            conn.Close();
+            conn.Dispose();
+            if(table == null)
+            {
+                table = null;
+            }
+            return table;
+        }
     }
 }

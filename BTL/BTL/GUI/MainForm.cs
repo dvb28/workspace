@@ -25,10 +25,6 @@ namespace BTL.GUI
         //List chứa các Form
         List<Form> listForm = new List<Form>();
         private void addFormToList() { listForm.Add(frHangHoa); listForm.Add(frNhanVien); listForm.Add(frKhachHang); listForm.Add(frHoaDon); listForm.Add(frLienHe); listForm.Add(frDoanhThu); }
-        //Các biến màu sắc của form
-        string menuTextColor_1 = "DFE6F1";
-        string menuTextColor_2 = "007DFA";
-        string textColor = "4F4F4F";
         public MainForm()
         {
             InitializeComponent();
@@ -76,13 +72,15 @@ namespace BTL.GUI
             formMatch(frHangHoa);
             hideForm(frHangHoa);
             indicatorLine.Top = ((Control)sender).Top;
+            frHangHoa.loadDataGrid();
         }
         //Show Form Nhân Viên
-        private void nhanhvienBtn_Click(object sender, EventArgs e)
+        private void nhanvienBtn_Click(object sender, EventArgs e)
         {
             formMatch(frNhanVien);
             hideForm(frNhanVien);
             indicatorLine.Top = ((Control)sender).Top;
+            frNhanVien.loadDataGrid();
         }
         //Show Form Khách Hàng
         private void khachhangBtn_Click(object sender, EventArgs e)
@@ -90,6 +88,7 @@ namespace BTL.GUI
             formMatch(frKhachHang);
             hideForm(frKhachHang);
             indicatorLine.Top = ((Control)sender).Top;
+            frKhachHang.loadDataGrid();
         }
         //Show Form Hóa Đơn
         private void hoadonBtn_Click(object sender, EventArgs e)
@@ -97,7 +96,7 @@ namespace BTL.GUI
             formMatch(frHoaDon);
             hideForm(frHoaDon);
             indicatorLine.Top = ((Control)sender).Top;
-
+            frHoaDon.loadDataGrid();
         }
         //Show Form Liên Hệ
         private void lienheBtn_Click(object sender, EventArgs e)

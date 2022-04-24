@@ -40,6 +40,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,7 +48,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.indicatorLine = new System.Windows.Forms.PictureBox();
             this.lienheBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -60,6 +60,7 @@
             this.khachhangSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.khachhangPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.xuatKhachHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.khachhangPanelSub = new Bunifu.UI.WinForms.BunifuLabel();
             this.khachhangNav = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -74,7 +75,6 @@
             this.khachhangThemBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.khachhangXoaBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.xuatKhachHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).BeginInit();
             this.khachhangPanel.SuspendLayout();
@@ -749,6 +749,7 @@
             this.khachhangSearchBtn.TextMarginLeft = 0;
             this.khachhangSearchBtn.TextPadding = new System.Windows.Forms.Padding(0);
             this.khachhangSearchBtn.UseDefaultRadiusAndThickness = true;
+            this.khachhangSearchBtn.Click += new System.EventHandler(this.khachhangSearchBtn_Click);
             // 
             // khachhangSearch
             // 
@@ -825,6 +826,7 @@
             this.khachhangSearch.TextPlaceholder = "Tìm kiếm";
             this.khachhangSearch.UseSystemPasswordChar = false;
             this.khachhangSearch.WordWrap = true;
+            this.khachhangSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.khachhangSearch_KeyDown);
             // 
             // bunifuLabel1
             // 
@@ -864,6 +866,95 @@
             this.khachhangPanel.ShowBorders = true;
             this.khachhangPanel.Size = new System.Drawing.Size(1107, 630);
             this.khachhangPanel.TabIndex = 23;
+            // 
+            // xuatKhachHang
+            // 
+            this.xuatKhachHang.AllowAnimations = true;
+            this.xuatKhachHang.AllowMouseEffects = true;
+            this.xuatKhachHang.AllowToggling = false;
+            this.xuatKhachHang.AnimationSpeed = 200;
+            this.xuatKhachHang.AutoGenerateColors = false;
+            this.xuatKhachHang.AutoRoundBorders = false;
+            this.xuatKhachHang.AutoSizeLeftIcon = true;
+            this.xuatKhachHang.AutoSizeRightIcon = true;
+            this.xuatKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.xuatKhachHang.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
+            this.xuatKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xuatKhachHang.BackgroundImage")));
+            this.xuatKhachHang.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.xuatKhachHang.ButtonText = "Xuất File";
+            this.xuatKhachHang.ButtonTextMarginLeft = 0;
+            this.xuatKhachHang.ColorContrastOnClick = 45;
+            this.xuatKhachHang.ColorContrastOnHover = 45;
+            this.xuatKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.xuatKhachHang.CustomizableEdges = borderEdges8;
+            this.xuatKhachHang.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.xuatKhachHang.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.xuatKhachHang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.xuatKhachHang.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.xuatKhachHang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.xuatKhachHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.xuatKhachHang.ForeColor = System.Drawing.Color.White;
+            this.xuatKhachHang.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.xuatKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.xuatKhachHang.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.xuatKhachHang.IconMarginLeft = 11;
+            this.xuatKhachHang.IconPadding = 10;
+            this.xuatKhachHang.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.xuatKhachHang.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.xuatKhachHang.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.xuatKhachHang.IconSize = 25;
+            this.xuatKhachHang.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
+            this.xuatKhachHang.IdleBorderRadius = 10;
+            this.xuatKhachHang.IdleBorderThickness = 1;
+            this.xuatKhachHang.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
+            this.xuatKhachHang.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuatKhachHang.IdleIconLeftImage")));
+            this.xuatKhachHang.IdleIconRightImage = null;
+            this.xuatKhachHang.IndicateFocus = false;
+            this.xuatKhachHang.Location = new System.Drawing.Point(911, 35);
+            this.xuatKhachHang.Name = "xuatKhachHang";
+            this.xuatKhachHang.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.xuatKhachHang.OnDisabledState.BorderRadius = 10;
+            this.xuatKhachHang.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.xuatKhachHang.OnDisabledState.BorderThickness = 1;
+            this.xuatKhachHang.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.xuatKhachHang.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.xuatKhachHang.OnDisabledState.IconLeftImage = null;
+            this.xuatKhachHang.OnDisabledState.IconRightImage = null;
+            this.xuatKhachHang.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.xuatKhachHang.onHoverState.BorderRadius = 10;
+            this.xuatKhachHang.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.xuatKhachHang.onHoverState.BorderThickness = 1;
+            this.xuatKhachHang.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.xuatKhachHang.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.xuatKhachHang.onHoverState.IconLeftImage = null;
+            this.xuatKhachHang.onHoverState.IconRightImage = null;
+            this.xuatKhachHang.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
+            this.xuatKhachHang.OnIdleState.BorderRadius = 10;
+            this.xuatKhachHang.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.xuatKhachHang.OnIdleState.BorderThickness = 1;
+            this.xuatKhachHang.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
+            this.xuatKhachHang.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.xuatKhachHang.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuatKhachHang.OnIdleState.IconLeftImage")));
+            this.xuatKhachHang.OnIdleState.IconRightImage = null;
+            this.xuatKhachHang.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.xuatKhachHang.OnPressedState.BorderRadius = 10;
+            this.xuatKhachHang.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.xuatKhachHang.OnPressedState.BorderThickness = 1;
+            this.xuatKhachHang.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.xuatKhachHang.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.xuatKhachHang.OnPressedState.IconLeftImage = null;
+            this.xuatKhachHang.OnPressedState.IconRightImage = null;
+            this.xuatKhachHang.Size = new System.Drawing.Size(161, 40);
+            this.xuatKhachHang.TabIndex = 42;
+            this.xuatKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.xuatKhachHang.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.xuatKhachHang.TextMarginLeft = 0;
+            this.xuatKhachHang.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.xuatKhachHang.UseDefaultRadiusAndThickness = true;
             // 
             // khachhangPanelSub
             // 
@@ -1016,6 +1107,7 @@
             // khachhangTable
             // 
             this.khachhangTable.AllowCustomTheming = false;
+            this.khachhangTable.AllowUserToAddRows = false;
             this.khachhangTable.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -1068,6 +1160,7 @@
             this.khachhangTable.Location = new System.Drawing.Point(42, 122);
             this.khachhangTable.Margin = new System.Windows.Forms.Padding(15, 20, 10, 20);
             this.khachhangTable.Name = "khachhangTable";
+            this.khachhangTable.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -1262,6 +1355,7 @@
             this.khachhangThemBtn.TextMarginLeft = 0;
             this.khachhangThemBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.khachhangThemBtn.UseDefaultRadiusAndThickness = true;
+            this.khachhangThemBtn.Click += new System.EventHandler(this.khachhangThemBtn_Click);
             // 
             // khachhangXoaBtn
             // 
@@ -1366,95 +1460,6 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(209, 65);
             this.bunifuPanel2.TabIndex = 27;
             // 
-            // xuatKhachHang
-            // 
-            this.xuatKhachHang.AllowAnimations = true;
-            this.xuatKhachHang.AllowMouseEffects = true;
-            this.xuatKhachHang.AllowToggling = false;
-            this.xuatKhachHang.AnimationSpeed = 200;
-            this.xuatKhachHang.AutoGenerateColors = false;
-            this.xuatKhachHang.AutoRoundBorders = false;
-            this.xuatKhachHang.AutoSizeLeftIcon = true;
-            this.xuatKhachHang.AutoSizeRightIcon = true;
-            this.xuatKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.xuatKhachHang.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
-            this.xuatKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xuatKhachHang.BackgroundImage")));
-            this.xuatKhachHang.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.xuatKhachHang.ButtonText = "Xuất File";
-            this.xuatKhachHang.ButtonTextMarginLeft = 0;
-            this.xuatKhachHang.ColorContrastOnClick = 45;
-            this.xuatKhachHang.ColorContrastOnHover = 45;
-            this.xuatKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.xuatKhachHang.CustomizableEdges = borderEdges8;
-            this.xuatKhachHang.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.xuatKhachHang.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.xuatKhachHang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.xuatKhachHang.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.xuatKhachHang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.xuatKhachHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.xuatKhachHang.ForeColor = System.Drawing.Color.White;
-            this.xuatKhachHang.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xuatKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.xuatKhachHang.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.xuatKhachHang.IconMarginLeft = 11;
-            this.xuatKhachHang.IconPadding = 10;
-            this.xuatKhachHang.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.xuatKhachHang.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.xuatKhachHang.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.xuatKhachHang.IconSize = 25;
-            this.xuatKhachHang.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
-            this.xuatKhachHang.IdleBorderRadius = 10;
-            this.xuatKhachHang.IdleBorderThickness = 1;
-            this.xuatKhachHang.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
-            this.xuatKhachHang.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuatKhachHang.IdleIconLeftImage")));
-            this.xuatKhachHang.IdleIconRightImage = null;
-            this.xuatKhachHang.IndicateFocus = false;
-            this.xuatKhachHang.Location = new System.Drawing.Point(911, 35);
-            this.xuatKhachHang.Name = "xuatKhachHang";
-            this.xuatKhachHang.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.xuatKhachHang.OnDisabledState.BorderRadius = 10;
-            this.xuatKhachHang.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.xuatKhachHang.OnDisabledState.BorderThickness = 1;
-            this.xuatKhachHang.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.xuatKhachHang.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.xuatKhachHang.OnDisabledState.IconLeftImage = null;
-            this.xuatKhachHang.OnDisabledState.IconRightImage = null;
-            this.xuatKhachHang.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.xuatKhachHang.onHoverState.BorderRadius = 10;
-            this.xuatKhachHang.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.xuatKhachHang.onHoverState.BorderThickness = 1;
-            this.xuatKhachHang.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.xuatKhachHang.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.xuatKhachHang.onHoverState.IconLeftImage = null;
-            this.xuatKhachHang.onHoverState.IconRightImage = null;
-            this.xuatKhachHang.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
-            this.xuatKhachHang.OnIdleState.BorderRadius = 10;
-            this.xuatKhachHang.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.xuatKhachHang.OnIdleState.BorderThickness = 1;
-            this.xuatKhachHang.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(213)))));
-            this.xuatKhachHang.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.xuatKhachHang.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("xuathoadonBtn.OnIdleState.IconLeftImage")));
-            this.xuatKhachHang.OnIdleState.IconRightImage = null;
-            this.xuatKhachHang.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.xuatKhachHang.OnPressedState.BorderRadius = 10;
-            this.xuatKhachHang.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.xuatKhachHang.OnPressedState.BorderThickness = 1;
-            this.xuatKhachHang.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.xuatKhachHang.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.xuatKhachHang.OnPressedState.IconLeftImage = null;
-            this.xuatKhachHang.OnPressedState.IconRightImage = null;
-            this.xuatKhachHang.Size = new System.Drawing.Size(161, 40);
-            this.xuatKhachHang.TabIndex = 42;
-            this.xuatKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.xuatKhachHang.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.xuatKhachHang.TextMarginLeft = 0;
-            this.xuatKhachHang.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.xuatKhachHang.UseDefaultRadiusAndThickness = true;
-            // 
             // formKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1469,7 +1474,6 @@
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Name = "formKhachHang";
             this.Text = "formKhachHang";
-            this.Load += new System.EventHandler(this.formKhachHang_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).EndInit();
             this.khachhangPanel.ResumeLayout(false);

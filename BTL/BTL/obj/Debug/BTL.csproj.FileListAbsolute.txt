@@ -166,7 +166,6 @@ C:\Users\daovi\source\repos\BTL\BTL\obj\Debug\BTL.formDangNhapDangKy.resources
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\BTL.exe.config
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\BTL.exe
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\BTL.pdb
-C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Licensing.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
@@ -249,3 +248,12 @@ C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.csproj.CoreC
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.csproj.CopyComplete
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.exe
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.pdb
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.GUI.InsertForm.isrHangHoa.resources
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.GUI.InsertForm.isrHoaDon.resources
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.GUI.InsertForm.isrKhachHang.resources
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\obj\Debug\BTL.GUI.InsertForm.isrNhanVien.resources
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Aspose.Words.dll
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Aspose.Words.xml
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Charts.WinForms.dll
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Charts.WinForms.xml
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Licensing.dll

@@ -14,12 +14,13 @@ namespace BTL.DAL.Interface
         string MaNV { get; set; }
         string MaKH { get; set; }
         string NgayHD { get; set; }
-        float ThanhTien { get; set; }
         //Phương thức Get
         DataTable Get(string strSqlConnection);
         //Phương thức Thêm
         int Add(string strSqlConnection);
         //Phương thức Xóa
         int Remove(string strSqlConnection);
+        //Phuong thức Tìm Kiếm
+        DataTable Search(string strSqlConnection, string searchContent);
     }
 }
