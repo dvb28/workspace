@@ -254,7 +254,8 @@ namespace BTL
          thông báo lỗi, nếu đúng thông tin và TextBox không trống thì sẽ đăng nhập thành công*/
         private void Validate(List<BunifuTextBox> thisListBox, List<BunifuUserControl> thisUserControl, List<BunifuLabel> thisErrorMessage, int start, int end, string style)
         {
-            for(int i = start; i < end; i++)
+            BUS.clsBridge_BUS clsBridge_BUS = new BUS.clsBridge_BUS();
+            for (int i = start; i < end; i++)
             {
                 if(thisListBox[i].Text == "")
                 {
@@ -262,21 +263,38 @@ namespace BTL
                     thisErrorMessage[i].Visible = true;
                 } else if(thisListBox[i].Text != "" && style == "login")
                 {
-                    //Lấy thông tin user từ dữ liệu đã lấy trên Database và check
-                    DataTable table = new DataTable();
-                    foreach (DataRow row in table.Rows)
-                    {
-                        string tempName = row["TenTaiKhoan"].ToString();
-                        string tempPass = row["MatKhau"].ToString();
-
-                        if (tempName.Trim() == (ListLoginBoxs[0].Text).Trim() && tempPass.Trim() == (ListLoginBoxs[1].Text).Trim())
+                    //Lấy thông tin user từ dữ
+                    //liệu đã lấy trên Database và check
+                    if(isLoginClick == true) {
+                        SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM TaiKhoan", clsBridge_BUS.strConnection);
+                        DataTable table = new DataTable();
+                        da.Fill(table);
+                        da.Dispose();
+                        foreach (DataRow row in table.Rows)
                         {
-                            userName = tempName.Trim();
-                            userPassword = tempPass.Trim();
-                            break;
+                            string tempName = row["TenTaiKhoan"].ToString();
+                            string tempPass = row["MatKhau"].ToString();
+
+                            if (tempName.Trim() == (ListLoginBoxs[0].Text).Trim() && tempPass.Trim() == (ListLoginBoxs[1].Text).Trim())
+                            {
+                                userName = tempName.Trim();
+                                userPassword = tempPass.Trim();
+                                break;
+                            }
                         }
                     }
                 }
+                else if(thisListBox[i].Text != "" && style == "register") {
+                if (isRegisterClick == true)
+                {
+                        Ultil.Ultil.ExecuteProcedure(
+                        new string[] { "@TenTaiKhoan", "@MatKhau", @"SDT" },
+                        new object[] { ListRegisterBoxs[0].Text, ListRegisterBoxs[2].Text, ListRegisterBoxs[1].Text },
+                        clsBridge_BUS.strConnection, "sp_insertTaiKhoan");
+                        MessageBox.Show("Đăng ký thành công", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                }
+            }
             }
             checkUserInfo(userName, userPassword);
         }
@@ -290,6 +308,7 @@ namespace BTL
                     Home.ShowDialog();
                     ListLoginEmptyErrorMessage[0].Text = "Tài khoản không thể để trống";
                     ListLoginEmptyErrorMessage[1].Text = "Mật khẩu không thể để trống";
+                    this.Hide();
                 }
                 else
                 {

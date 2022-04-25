@@ -17,10 +17,8 @@ namespace BTL.GUI {
             InitializeComponent();
         }
 
-        static DAL.Connection.clsConnect connection = new DAL.Connection.clsConnect(@"ACER-NITRO-5\SQLEXPRESS", "BTL_QLBH", "sa", "123456@Ab");
-        // string strConnection = $@"Data Source=ACER-NITRO-5\SQLEXPRESS;Initial Catalog=BTL_QLBH;User ID =sa;Password=123456@Ab";
-        public string strConnection = connection.getConectionString();
-        //SqlConnection cnn = new SqlConnection(@"Data Source = MSI\SQLEXPRESS; Initial Catalog = BTL_QLBH; User ID = sa; Password=123");
+        static BUS.clsBridge_BUS clsBridge_BUS = new BUS.clsBridge_BUS();
+        public string strConnection = clsBridge_BUS.strConnection;
         SqlCommand cmd;
         SqlDataReader dr;
         private void formDoanhThu_Load(object sender, EventArgs e) {
@@ -51,10 +49,11 @@ namespace BTL.GUI {
             cnn.Open();
             cmd.ExecuteNonQuery();
             // In dữ liệu ra lable
-            lbHangHoa.Text = "SL : " + cmd.Parameters["@SLHang"].Value.ToString();
-            lbNhanVien.Text = "SL : " + cmd.Parameters["@SLNhanVien"].Value.ToString();
-            lbKhachHang.Text = "SL : " + cmd.Parameters["@SLKH"].Value.ToString();
-            lbDoanhThu.Text = "SL : " + cmd.Parameters["@DoanhThu"].Value.ToString();
+            lbHangHoa.Text = cmd.Parameters["@SLHang"].Value.ToString() + " loại hàng";
+            lbNhanVien.Text = cmd.Parameters["@SLNhanVien"].Value.ToString() + " nhân viên";
+            lbKhachHang.Text = cmd.Parameters["@SLKH"].Value.ToString() + " khách hàng";
+            lbDoanhThu.Text = "$ " + cmd.Parameters["@DoanhThu"].Value.ToString() + "K";
+            lbHoaDon.Text = cmd.Parameters["@SLHoaDon"].Value.ToString() + " HĐ đã xuất";
             cnn.Close();
         }
 
@@ -96,7 +95,7 @@ namespace BTL.GUI {
                 soLuong.Add(dr.GetInt32(1));
             }
             //Truyền giá trị cho cột X và Y
-            charTopHang.Series[0].Points.DataBindXY(tenHang, soLuong);
+            //charTopHang.Series[0].Points.DataBindXY(tenHang, soLuong);
             dr.Close();
             cnn.Close();
         }
@@ -109,11 +108,8 @@ namespace BTL.GUI {
             DataTable data = new DataTable();
             da.Fill(data);
             //Hiển thị thông tin lên datagridview.
-            dgvDoanhSo.DataSource = data;
+            //dgvDoanhSo.DataSource = data;
         }
 
-        private void bunifuDatavizBasic1_Load(object sender, EventArgs e) {
-
-        }
     }
 }

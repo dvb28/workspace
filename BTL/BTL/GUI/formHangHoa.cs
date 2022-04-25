@@ -8,6 +8,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Words;
+using Aspose.Words.Tables;
+using Lib.Report.AsposeWordExtension;
 namespace BTL.GUI
 {
     public partial class formHangHoa : Form
@@ -58,6 +61,27 @@ namespace BTL.GUI
         private void hanghoaThemBtn_Click(object sender, EventArgs e) {
             GUI.InsertForm.isrHangHoa isrHangHoa = new GUI.InsertForm.isrHangHoa(hanghoaTable);
             isrHangHoa.ShowDialog();
+        }
+
+        private void xuatHangHoa_Click(object sender, EventArgs e) {
+            if (MessageBox.Show($"Bạn muốn xuất thông tin hàng hóa?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Document hanghoaBaoCao = new Document($@"..\..\CrystalReport\ReportSample\BaoCaoHangHoa.doc");
+                Table hanghoaTb = hanghoaBaoCao.GetChild(NodeType.Table, 0, true) as Table;
+                int currentRow = 1;
+                hanghoaTb.InsertRows(currentRow, currentRow, (hanghoaTable.Rows.Count - 1));
+                for (int i = 0; i < hanghoaTable.Rows.Count; i++)
+                {
+                    hanghoaTb.PutValue(currentRow, 0, hanghoaTable.Rows[i].Cells["MaHang"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 1, hanghoaTable.Rows[i].Cells["TenLoai"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 2, hanghoaTable.Rows[i].Cells["TenNCC"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 3, hanghoaTable.Rows[i].Cells["TenHang"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 4, hanghoaTable.Rows[i].Cells["Gia"].Value.ToString() + "$");
+                    hanghoaTb.PutValue(currentRow, 5, hanghoaTable.Rows[i].Cells["SoLuong"].Value.ToString());
+                    currentRow++;
+                }
+                hanghoaBaoCao.SaveAndOpenFile("BaoCaoHang.pdf");
+            }
         }
     }
 }

@@ -2544,6 +2544,24 @@
             Gets or sets the font style.
             </summary>
         </member>
+        <member name="T:Bunifu.Charts.WinForms.Helpers.Logger">
+            <summary>
+            Provides logging services.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Charts.WinForms.Helpers.Logger.Add(System.String)">
+            <summary>
+            Logs a specified status message.
+            </summary>
+            <param name="message">
+            The log message.
+            </param>
+        </member>
+        <member name="M:Bunifu.Charts.WinForms.Helpers.Logger.Clear">
+            <summary>
+            Clears the list of logged messages.
+            </summary>
+        </member>
         <member name="T:Bunifu.Charts.WinForms.Properties.Resources">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.

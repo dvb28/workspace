@@ -75,7 +75,7 @@
             this.hanghoaThemBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.hanghoaXoaBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).BeginInit();
             this.hoadonPanel.SuspendLayout();
@@ -982,6 +982,7 @@
             this.hoadonNav.BorderColor = System.Drawing.Color.White;
             this.hoadonNav.BorderRadius = 20;
             this.hoadonNav.BorderThickness = 0;
+            this.hoadonNav.Controls.Add(this.bunifuLabel7);
             this.hoadonNav.Controls.Add(this.bunifuLabel6);
             this.hoadonNav.Controls.Add(this.bunifuLabel5);
             this.hoadonNav.Controls.Add(this.bunifuLabel4);
@@ -1001,7 +1002,7 @@
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel6.Location = new System.Drawing.Point(867, 12);
+            this.bunifuLabel6.Location = new System.Drawing.Point(869, 12);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(91, 25);
@@ -1017,12 +1018,12 @@
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel5.Location = new System.Drawing.Point(696, 12);
+            this.bunifuLabel5.Location = new System.Drawing.Point(580, 12);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(74, 25);
+            this.bunifuLabel5.Size = new System.Drawing.Size(84, 25);
             this.bunifuLabel5.TabIndex = 9;
-            this.bunifuLabel5.Text = "Ngày HD";
+            this.bunifuLabel5.Text = "Tên Khách";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1033,12 +1034,12 @@
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel4.Location = new System.Drawing.Point(521, 12);
+            this.bunifuLabel4.Location = new System.Drawing.Point(437, 12);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(128, 25);
+            this.bunifuLabel4.Size = new System.Drawing.Size(79, 25);
             this.bunifuLabel4.TabIndex = 8;
-            this.bunifuLabel4.Text = "Mã Khách Hàng";
+            this.bunifuLabel4.Text = "Số Lượng";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1049,12 +1050,12 @@
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel3.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel3.Location = new System.Drawing.Point(355, 12);
+            this.bunifuLabel3.Location = new System.Drawing.Point(286, 12);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(118, 25);
+            this.bunifuLabel3.Size = new System.Drawing.Size(123, 25);
             this.bunifuLabel3.TabIndex = 7;
-            this.bunifuLabel3.Text = "Mã Nhân Viên";
+            this.bunifuLabel3.Text = "Tên Nhân Viên";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1065,12 +1066,12 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(178, 12);
+            this.bunifuLabel2.Location = new System.Drawing.Point(154, 12);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(75, 25);
+            this.bunifuLabel2.Size = new System.Drawing.Size(80, 25);
             this.bunifuLabel2.TabIndex = 6;
-            this.bunifuLabel2.Text = "Mã Hàng";
+            this.bunifuLabel2.Text = "Tên Hàng";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1204,7 +1205,7 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.hoadonTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.hoadonTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.hoadonTable.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.hoadonTable.BackgroundColor = System.Drawing.Color.White;
             this.hoadonTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hoadonTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.hoadonTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -1217,8 +1218,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.hoadonTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hoadonTable.ColumnHeadersHeight = 40;
-            this.hoadonTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.hoadonTable.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -1270,7 +1269,8 @@
             this.hoadonTable.Size = new System.Drawing.Size(1029, 453);
             this.hoadonTable.TabIndex = 29;
             this.hoadonTable.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-           
+            // 
+            // hanghoaThemBtn
             // 
             this.hanghoaThemBtn.AllowAnimations = true;
             this.hanghoaThemBtn.AllowMouseEffects = true;
@@ -1463,12 +1463,21 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(209, 65);
             this.bunifuPanel2.TabIndex = 28;
             // 
-            // Column1
+            // bunifuLabel7
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(728, 12);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(86, 25);
+            this.bunifuLabel7.TabIndex = 11;
+            this.bunifuLabel7.Text = "Ngày Xuất";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // formHoaDon
             // 
@@ -1525,6 +1534,6 @@
         private Bunifu.UI.WinForms.BunifuLabel hoadonPanelSub;
         private Bunifu.UI.WinForms.BunifuLabel hoadonPanelTitle;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 xuatHoaDon;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
     }
 }

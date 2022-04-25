@@ -22,7 +22,7 @@ namespace BTL.GUI.InsertForm {
         //Load Ghi Chú
         public void loadGhiChu() {
             try
-            {
+            {   
                 SqlDataAdapter da = new SqlDataAdapter("SELECT DISTINCT GhiChu FROM KhachHang", clsKhachHang_BUS.strConnection);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

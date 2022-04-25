@@ -29,6 +29,7 @@ namespace BTL.GUI
         {
             InitializeComponent();
             addFormToList();
+        
         }
 
         //Form tùy ý sẽ thành form con của Form Main

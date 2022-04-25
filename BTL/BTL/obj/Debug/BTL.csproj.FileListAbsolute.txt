@@ -257,3 +257,5 @@ C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Aspose.Words.xml
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Charts.WinForms.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Charts.WinForms.xml
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Licensing.dll
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Dataviz.WinForms.dll
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Dataviz.WinForms.xml
