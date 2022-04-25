@@ -164,11 +164,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\clsBridge_BUS.cs" />
+    <Compile Include="DAL\clsDoanhThu_DAL.cs" />
     <Compile Include="DAL\clsHangHoa_DAL.cs" />
     <Compile Include="DAL\clsHoaDon_DAL.cs" />
     <Compile Include="DAL\clsKhachHang_DAL.cs" />
     <Compile Include="DAL\clsNhanVien_DAL.cs" />
     <Compile Include="DAL\Connection\clsConnect.cs" />
+    <Compile Include="DAL\Interface\IDoanhThu.cs" />
     <Compile Include="DAL\Interface\IHangHoa.cs" />
     <Compile Include="DAL\Interface\IHoaDon.cs" />
     <Compile Include="DAL\Interface\IKhachHang.cs" />

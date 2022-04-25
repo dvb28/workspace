@@ -50,11 +50,11 @@ namespace BTL.DAL.clsNhanVien_DAL
             return table;
         }
 
-        public int Remove(string strSqlConnection)
+        public int Remove(string strSqlConnection, string MaNV)
         {
             return Ultil.Ultil.ExecuteProcedure(
-            new string[] { "@MaNV", "@TenNV", "@SDT", "@DiaChi", "@DoanhSo" },
-            new object[] { MaNV, TenNV, SDT, DiaChi},
+            new string[] { "@MaNV"},
+            new object[] { MaNV},
             strSqlConnection, "sp_deleteNhanVien");
         }
 
@@ -76,6 +76,12 @@ namespace BTL.DAL.clsNhanVien_DAL
             }
             return table;
         }
-
+        //Phương thức cập nhật dữ liệu
+        public int Update(string strSqlConnection) {
+            return Ultil.Ultil.ExecuteProcedure(
+            new string[] { "@MaNV", "@TenNV", "@SDT", "@DiaChi" },
+            new object[] { MaNV, TenNV, SDT, DiaChi },
+            strSqlConnection, "sp_updateNhanVien");
+        }
     }
 }

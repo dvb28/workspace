@@ -259,3 +259,4 @@ C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Charts.Wi
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Licensing.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Dataviz.WinForms.dll
 C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\daovi\OneDrive\Máy tính\Repository\BTL\BTL\bin\Debug\Guna.UI2.dll

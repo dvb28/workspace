@@ -54,11 +54,11 @@ namespace BTL.DAL.clsHangHoa_DAL
         }
         //Phương thức Xóa sử dụng Procedure
 
-        public int Remove(string strSqlConnection, string rmID)
+        public int Remove(string strSqlConnection, string MaHH)
         {
             return Ultil.Ultil.ExecuteProcedure(
             new string[] { "@MaHang"},
-            new object[] { MaHang},
+            new object[] { MaHH },
             strSqlConnection, "sp_deleteHangHoa");
         }
 
@@ -79,6 +79,13 @@ namespace BTL.DAL.clsHangHoa_DAL
                 table = null;
             }
             return table;
+        }
+        //Phương thức Cập nhật dữ liệu
+        public int Update(string strSqlConnection) {
+            return Ultil.Ultil.ExecuteProcedure(
+            new string[] { "@MaHang", "@MaLoai", "@MaNCC", "@TenHang", "@Gia", "@SoLuong" },
+            new object[] { MaHang, MaLoai, MaNCC, TenHang, Gia, SoLuong },
+            strSqlConnection, "sp_updateHangHoa");
         }
     }
 }

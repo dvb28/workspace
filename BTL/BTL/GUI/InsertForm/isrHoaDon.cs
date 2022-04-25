@@ -87,6 +87,21 @@ namespace BTL.GUI.InsertForm {
                 if (MessageBox.Show("Bạn có chắc chắn muốn thêm?!", "Add Document", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     clsHangHoa_BUS.addHoaDon(dvg, txtMaHD.Text, txtMaHang.Text, txtMaNV.Text, txtMaKH.Text, txtNgayHD.Text);
+                    MessageBox.Show("Thêm thành công", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void hanghoaBtnUpdate_Click(object sender, EventArgs e) {
+            if (txtMaHang.Text == "" || txtMaHD.Text == "" || txtMaHang.Text == "" || txtMaNV.Text == "" || txtMaKH.Text == "" || txtNgayHD.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn thêm?!", "Add Document", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    clsHangHoa_BUS.updateHoaDon(dvg, txtMaHD.Text, txtMaHang.Text, txtMaNV.Text, txtMaKH.Text, txtNgayHD.Text);
+                    MessageBox.Show("Cập nhật thành công", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

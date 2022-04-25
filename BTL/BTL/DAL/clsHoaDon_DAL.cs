@@ -50,11 +50,11 @@ namespace BTL.DAL.clsHoaDon_DAL
         }
 
         //Phương thức xóa sử dụng Procedure
-        public int Remove(string strSqlConnection)
+        public int Remove(string strSqlConnection, string MaHD)
         {
             return Ultil.Ultil.ExecuteProcedure(
-            new string[] { "@MaHD", "@MaNV", "@MaKH", "@NgayHD", "@ThanhTien" },
-            new object[] { MaHD, MaNV, MaKH, NgayHD },
+            new string[] { "@MaHD"},
+            new object[] { MaHD},
             strSqlConnection, "sp_deleteHoaDon");
         }
 
@@ -75,6 +75,14 @@ namespace BTL.DAL.clsHoaDon_DAL
                 table = null;
             }
             return table;
+        }
+
+        //Phương thức cập nhật dữ liệu
+        public int Update(string strSqlConnection) {
+            return Ultil.Ultil.ExecuteProcedure(
+            new string[] { "@MaHD", "@MaHang", "@MaNV", "@MaKH", "@NgayHD" },
+            new object[] { MaHD, MaHang, MaNV, MaKH, NgayHD },
+            strSqlConnection, "sp_updateHoaDon");
         }
     }
 }

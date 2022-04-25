@@ -50,5 +50,16 @@ namespace BTL.GUI
             GUI.InsertForm.isrKhachHang isrKhachHang = new GUI.InsertForm.isrKhachHang(khachhangTable);
             isrKhachHang.ShowDialog();
         }
+
+        private void khachhangXoaBtn_Click(object sender, EventArgs e) {
+            if (khachhangTable.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    clsKhachHang_BUS.deleteHoaDon(khachhangTable, khachhangTable.CurrentRow.Cells["MaKH"].Value.ToString());
+                    MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

@@ -1445,6 +1445,7 @@
             this.khachhangXoaBtn.TextMarginLeft = 0;
             this.khachhangXoaBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.khachhangXoaBtn.UseDefaultRadiusAndThickness = true;
+            this.khachhangXoaBtn.Click += new System.EventHandler(this.khachhangXoaBtn_Click);
             // 
             // bunifuPanel2
             // 

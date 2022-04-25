@@ -48,7 +48,11 @@ namespace BTL.GUI
         private void hanghoaXoaBtn_Click(object sender, EventArgs e) {
             if (hanghoaTable.SelectedRows.Count > 0)
             {
-                hanghoaTable.Rows.RemoveAt(hanghoaTable.CurrentRow.Index);
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    clsHangHoa_BUS.deleteHoaDon(hanghoaTable, hanghoaTable.CurrentRow.Cells["MaHang"].Value.ToString());
+                    MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         //Các sự kiện phụ

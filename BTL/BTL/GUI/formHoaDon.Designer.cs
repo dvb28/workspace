@@ -63,6 +63,7 @@
             this.xuatHoaDon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.hoadonPanelSub = new Bunifu.UI.WinForms.BunifuLabel();
             this.hoadonNav = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -75,7 +76,6 @@
             this.hanghoaThemBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.hanghoaXoaBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).BeginInit();
             this.hoadonPanel.SuspendLayout();
@@ -995,6 +995,22 @@
             this.hoadonNav.Size = new System.Drawing.Size(1030, 49);
             this.hoadonNav.TabIndex = 30;
             // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel7.Location = new System.Drawing.Point(728, 12);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(86, 25);
+            this.bunifuLabel7.TabIndex = 11;
+            this.bunifuLabel7.Text = "Ngày Xuất";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // bunifuLabel6
             // 
             this.bunifuLabel6.AllowParentOverrides = false;
@@ -1448,6 +1464,7 @@
             this.hanghoaXoaBtn.TextMarginLeft = 0;
             this.hanghoaXoaBtn.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.hanghoaXoaBtn.UseDefaultRadiusAndThickness = true;
+            this.hanghoaXoaBtn.Click += new System.EventHandler(this.hanghoaXoaBtn_Click);
             // 
             // bunifuPanel2
             // 
@@ -1462,22 +1479,6 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(209, 65);
             this.bunifuPanel2.TabIndex = 28;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Location = new System.Drawing.Point(728, 12);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(86, 25);
-            this.bunifuLabel7.TabIndex = 11;
-            this.bunifuLabel7.Text = "Ngày Xuất";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // formHoaDon
             // 

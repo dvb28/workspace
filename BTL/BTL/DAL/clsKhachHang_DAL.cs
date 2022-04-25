@@ -51,12 +51,12 @@ namespace BTL.DAL.clsKhachHang_DAL
             return table;
         }
 
-        public int Remove(string strSqlConnection)
+        public int Remove(string strSqlConnection, string MaKH)
         {
             return Ultil.Ultil.ExecuteProcedure(
-            new string[] { "@MaKH", "@TenKH", "@SDT", "@DiaChi", "@LuotMua", "@GhiChu" },
-            new object[] { MaKH, TenKH, SDT, DiaChi, LuotMua },
-            strSqlConnection, "sp_deletetKhachHang");
+            new string[] { "@MaKH"},
+            new object[] { MaKH},
+            strSqlConnection, "sp_deleteKhachHang");
         }
 
         //Phương thức tìm kiếm sử dụng Procedure
@@ -76,6 +76,15 @@ namespace BTL.DAL.clsKhachHang_DAL
                 table = null;
             }
             return table;
+        }
+
+
+        //Phương thức cập nhật dữ liệu
+        public int Update(string strSqlConnection) {
+            return Ultil.Ultil.ExecuteProcedure(
+            new string[] { "@MaKH", "@TenKH", "@SDT", "@DiaChi", "@LuotMua", "@GhiChu" },
+            new object[] { MaKH, TenKH, SDT, DiaChi, LuotMua, GhiChu },
+            strSqlConnection, "sp_updateKhachHang");
         }
     }
 }

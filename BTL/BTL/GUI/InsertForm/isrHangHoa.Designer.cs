@@ -42,6 +42,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.loaihangCbb = new Bunifu.UI.WinForms.BunifuDropdown();
             this.nhacungcapCbb = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -50,6 +51,7 @@
             this.txtSoLuong = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtTenHang = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtMaHang = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.hanghoaBtnUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SuspendLayout();
             // 
             // loaihangCbb
@@ -148,12 +150,12 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(134, 36);
+            this.bunifuLabel1.Location = new System.Drawing.Point(162, 36);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(161, 30);
+            this.bunifuLabel1.Size = new System.Drawing.Size(99, 30);
             this.bunifuLabel1.TabIndex = 9;
-            this.bunifuLabel1.Text = "Thêm Hàng Hóa";
+            this.bunifuLabel1.Text = "Hàng Hóa";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -204,7 +206,7 @@
             this.hanghoaBtnAdd.IdleIconLeftImage = null;
             this.hanghoaBtnAdd.IdleIconRightImage = null;
             this.hanghoaBtnAdd.IndicateFocus = false;
-            this.hanghoaBtnAdd.Location = new System.Drawing.Point(88, 500);
+            this.hanghoaBtnAdd.Location = new System.Drawing.Point(231, 500);
             this.hanghoaBtnAdd.Name = "hanghoaBtnAdd";
             this.hanghoaBtnAdd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.hanghoaBtnAdd.OnDisabledState.BorderRadius = 15;
@@ -238,7 +240,7 @@
             this.hanghoaBtnAdd.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.hanghoaBtnAdd.OnPressedState.IconLeftImage = null;
             this.hanghoaBtnAdd.OnPressedState.IconRightImage = null;
-            this.hanghoaBtnAdd.Size = new System.Drawing.Size(260, 44);
+            this.hanghoaBtnAdd.Size = new System.Drawing.Size(117, 44);
             this.hanghoaBtnAdd.TabIndex = 8;
             this.hanghoaBtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.hanghoaBtnAdd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -547,12 +549,103 @@
             this.txtMaHang.UseSystemPasswordChar = false;
             this.txtMaHang.WordWrap = true;
             // 
+            // hanghoaBtnUpdate
+            // 
+            this.hanghoaBtnUpdate.AllowAnimations = true;
+            this.hanghoaBtnUpdate.AllowMouseEffects = true;
+            this.hanghoaBtnUpdate.AllowToggling = false;
+            this.hanghoaBtnUpdate.AnimationSpeed = 200;
+            this.hanghoaBtnUpdate.AutoGenerateColors = false;
+            this.hanghoaBtnUpdate.AutoRoundBorders = false;
+            this.hanghoaBtnUpdate.AutoSizeLeftIcon = true;
+            this.hanghoaBtnUpdate.AutoSizeRightIcon = true;
+            this.hanghoaBtnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.hanghoaBtnUpdate.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.hanghoaBtnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hanghoaBtnUpdate.BackgroundImage")));
+            this.hanghoaBtnUpdate.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.hanghoaBtnUpdate.ButtonText = "Cập nhật";
+            this.hanghoaBtnUpdate.ButtonTextMarginLeft = 0;
+            this.hanghoaBtnUpdate.ColorContrastOnClick = 45;
+            this.hanghoaBtnUpdate.ColorContrastOnHover = 45;
+            this.hanghoaBtnUpdate.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.hanghoaBtnUpdate.CustomizableEdges = borderEdges2;
+            this.hanghoaBtnUpdate.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.hanghoaBtnUpdate.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.hanghoaBtnUpdate.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.hanghoaBtnUpdate.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.hanghoaBtnUpdate.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.hanghoaBtnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.hanghoaBtnUpdate.ForeColor = System.Drawing.Color.White;
+            this.hanghoaBtnUpdate.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hanghoaBtnUpdate.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.hanghoaBtnUpdate.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.hanghoaBtnUpdate.IconMarginLeft = 11;
+            this.hanghoaBtnUpdate.IconPadding = 10;
+            this.hanghoaBtnUpdate.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.hanghoaBtnUpdate.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.hanghoaBtnUpdate.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.hanghoaBtnUpdate.IconSize = 25;
+            this.hanghoaBtnUpdate.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.hanghoaBtnUpdate.IdleBorderRadius = 15;
+            this.hanghoaBtnUpdate.IdleBorderThickness = 1;
+            this.hanghoaBtnUpdate.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.hanghoaBtnUpdate.IdleIconLeftImage = null;
+            this.hanghoaBtnUpdate.IdleIconRightImage = null;
+            this.hanghoaBtnUpdate.IndicateFocus = false;
+            this.hanghoaBtnUpdate.Location = new System.Drawing.Point(88, 500);
+            this.hanghoaBtnUpdate.Name = "hanghoaBtnUpdate";
+            this.hanghoaBtnUpdate.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.hanghoaBtnUpdate.OnDisabledState.BorderRadius = 15;
+            this.hanghoaBtnUpdate.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.hanghoaBtnUpdate.OnDisabledState.BorderThickness = 1;
+            this.hanghoaBtnUpdate.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.hanghoaBtnUpdate.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.hanghoaBtnUpdate.OnDisabledState.IconLeftImage = null;
+            this.hanghoaBtnUpdate.OnDisabledState.IconRightImage = null;
+            this.hanghoaBtnUpdate.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.hanghoaBtnUpdate.onHoverState.BorderRadius = 15;
+            this.hanghoaBtnUpdate.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.hanghoaBtnUpdate.onHoverState.BorderThickness = 1;
+            this.hanghoaBtnUpdate.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.hanghoaBtnUpdate.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.hanghoaBtnUpdate.onHoverState.IconLeftImage = null;
+            this.hanghoaBtnUpdate.onHoverState.IconRightImage = null;
+            this.hanghoaBtnUpdate.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.hanghoaBtnUpdate.OnIdleState.BorderRadius = 15;
+            this.hanghoaBtnUpdate.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.hanghoaBtnUpdate.OnIdleState.BorderThickness = 1;
+            this.hanghoaBtnUpdate.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.hanghoaBtnUpdate.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.hanghoaBtnUpdate.OnIdleState.IconLeftImage = null;
+            this.hanghoaBtnUpdate.OnIdleState.IconRightImage = null;
+            this.hanghoaBtnUpdate.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.hanghoaBtnUpdate.OnPressedState.BorderRadius = 15;
+            this.hanghoaBtnUpdate.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.hanghoaBtnUpdate.OnPressedState.BorderThickness = 1;
+            this.hanghoaBtnUpdate.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.hanghoaBtnUpdate.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.hanghoaBtnUpdate.OnPressedState.IconLeftImage = null;
+            this.hanghoaBtnUpdate.OnPressedState.IconRightImage = null;
+            this.hanghoaBtnUpdate.Size = new System.Drawing.Size(117, 44);
+            this.hanghoaBtnUpdate.TabIndex = 10;
+            this.hanghoaBtnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hanghoaBtnUpdate.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hanghoaBtnUpdate.TextMarginLeft = 0;
+            this.hanghoaBtnUpdate.TextPadding = new System.Windows.Forms.Padding(0);
+            this.hanghoaBtnUpdate.UseDefaultRadiusAndThickness = true;
+            this.hanghoaBtnUpdate.Click += new System.EventHandler(this.hanghoaBtnUpdate_Click);
+            // 
             // isrHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(429, 577);
+            this.Controls.Add(this.hanghoaBtnUpdate);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.hanghoaBtnAdd);
             this.Controls.Add(this.nhacungcapCbb);
@@ -579,5 +672,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown nhacungcapCbb;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 hanghoaBtnAdd;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 hanghoaBtnUpdate;
     }
 }

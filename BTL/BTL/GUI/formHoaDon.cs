@@ -68,5 +68,16 @@ namespace BTL.GUI
                 crytalReport.SaveAndOpenFile("BaoCao.pdf");
             }
         }
+
+        private void hanghoaXoaBtn_Click(object sender, EventArgs e) {
+            if (hoadonTable.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    clsBridge_BUS.deleteHoaDon(hoadonTable, hoadonTable.CurrentRow.Cells["MaHD"].Value.ToString());
+                    MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

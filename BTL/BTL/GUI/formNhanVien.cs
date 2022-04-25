@@ -51,5 +51,16 @@ namespace BTL.GUI
             GUI.InsertForm.isrNhanVien isrNhanVien = new GUI.InsertForm.isrNhanVien(nhanvienTable);
             isrNhanVien.ShowDialog();
         }
+
+        private void hanghoaXoaBtn_Click(object sender, EventArgs e) {
+            if (nhanvienTable.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    clsNhanVien_BUS.deleteHoaDon(nhanvienTable, nhanvienTable.CurrentRow.Cells["MaNV"].Value.ToString());
+                    MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
