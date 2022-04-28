@@ -15,6 +15,10 @@ namespace BTL.GUI
         public formLienHe()
         {
             InitializeComponent();
+
+        }
+
+        private void formLienHe_Load(object sender, EventArgs e) {
         }
     }
 }

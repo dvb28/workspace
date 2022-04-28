@@ -9,11 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
+using Guna.UI2.WinForms;
 namespace BTL.GUI.InsertForm {
     public partial class isrKhachHang : Form {
         BUS.clsBridge_BUS clsKhachHang_BUS = new BUS.clsBridge_BUS();
-        BunifuDataGridView dvg = new BunifuDataGridView();
-        public isrKhachHang(BunifuDataGridView data) {
+        Guna2DataGridView dvg = new Guna2DataGridView();
+        public isrKhachHang(Guna2DataGridView data) {
             InitializeComponent();
             loadGhiChu();
             dvg = data;

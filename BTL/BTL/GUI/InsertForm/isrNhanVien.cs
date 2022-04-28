@@ -8,12 +8,12 @@ using System.Text;
 using Bunifu.UI.WinForms;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Guna.UI2.WinForms;
 namespace BTL.GUI.InsertForm {
     public partial class isrNhanVien : Form {
-        BunifuDataGridView dvg = new BunifuDataGridView();
+        Guna2DataGridView dvg = new Guna2DataGridView();
         BUS.clsBridge_BUS clsBridge_BUS = new BUS.clsBridge_BUS();
-        public isrNhanVien(BunifuDataGridView data) {
+        public isrNhanVien(Guna2DataGridView data) {
             InitializeComponent();
             dvg = data;
         }

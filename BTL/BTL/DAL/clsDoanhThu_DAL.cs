@@ -45,15 +45,14 @@ namespace BTL.DAL {
         }
 
         //Top Hàng hóa bán chạy nhất
-        public void TopNhanVien(string strConnection, Guna2DataGridView chartTopHang) {
+        public DataTable topHang(string strConnection) {
             SqlConnection cnn = new SqlConnection(strConnection);
             string text = "exec sp_topHang";
             SqlCommand cmd = new SqlCommand(text, cnn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             da.Fill(data);
-            //Hiển thị thông tin lên datagridview.
-            chartTopHang.DataSource = data;
+            return data;
         }
         //Bảng doanh thu
         public void LoadChart(string strConnection, BunifuChartCanvas chartDoanhThu, List<string> listMonth, List<string> listDoanhThu) {

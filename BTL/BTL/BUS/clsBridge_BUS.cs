@@ -28,8 +28,10 @@ namespace BTL.BUS
             objDoanhThu.Dashboard(strConnection, HangHoa, HoaDon, KhachHang, NhanVien, DoanhThu);
         }
         //Load TopNhanVien
-        public void loadTopNhanVien(Guna2DataGridView chartTopNhanVien) {
-            objDoanhThu.TopNhanVien(strConnection, chartTopNhanVien);
+        public void loadTopHang(Guna2DataGridView chartTopNhanVien) {
+            chartTopNhanVien.DataSource = objDoanhThu.topHang(strConnection);
+            chartTopNhanVien.Columns[0].HeaderText = "Tên Hàng";
+            chartTopNhanVien.Columns[1].HeaderText = "Số Lượng";
         }
         public void loadChart(BunifuChartCanvas chartDoanhThu, List<string> listMonth, List<string> listDoanhThu) {
             objDoanhThu.LoadChart(strConnection, chartDoanhThu, listMonth, listDoanhThu);
@@ -41,28 +43,51 @@ namespace BTL.BUS
             return 1;
         }
         //Đẩy dữ liệu của bảng HangHoa lên DataGridView
-        public void showHangHoa(BunifuDataGridView data)
+        public void showHangHoa(Guna2DataGridView data)
         {
             data.DataSource = objHangHoa.Get(strConnection);
+            data.Columns[0].HeaderText = "Mã Hàng";
+            data.Columns[1].HeaderText = "Loại Hàng";
+            data.Columns[2].HeaderText = "Mã NCC";
+            data.Columns[3].HeaderText = "Tên Hàng";
+            data.Columns[4].HeaderText = "Giá($)";
+            data.Columns[5].HeaderText = "Số Lượng";
         }
         //Đẩy dữ liệu của bảng NhanVien lên DataGridView
-        public void showNhanVien(BunifuDataGridView data)
+        public void showNhanVien(Guna2DataGridView data)
         {
             data.DataSource = objNhanVien.Get(strConnection);
+            data.Columns[0].HeaderText = "Mã NV";
+            data.Columns[1].HeaderText = "Tên Nhân Viên";
+            data.Columns[2].HeaderText = "SĐT";
+            data.Columns[3].HeaderText = "Địa Chỉ";
         }
         //Đẩy dữ liệu của bảng NhanVien lên DataGridView
-        public void showKhachHang(BunifuDataGridView data)
+        public void showKhachHang(Guna2DataGridView data)
         {
             data.DataSource = objKhachHang.Get(strConnection);
+            data.Columns[0].HeaderText = "Mã KH";
+            data.Columns[1].HeaderText = "Tên KH";
+            data.Columns[2].HeaderText = "SĐT";
+            data.Columns[3].HeaderText = "Địa Chỉ";
+            data.Columns[4].HeaderText = "Lượt Mua";
+            data.Columns[5].HeaderText = "Ghi Chú";
         }
         //Đẩy dữ liệu của bảng NhanVien lên DataGridView
-        public void showHoaDon(BunifuDataGridView data)
+        public void showHoaDon(Guna2DataGridView data)
         {
             data.DataSource = objHoaDon.Get(strConnection);
+            data.Columns[0].HeaderText = "Mã HĐ";
+            data.Columns[1].HeaderText = "Tên Hàng";
+            data.Columns[2].HeaderText = "Nhân Viên";
+            data.Columns[3].HeaderText = "Số Lượng";
+            data.Columns[4].HeaderText = "Tên Khách";
+            data.Columns[6].HeaderText = "Ngày Xuất";
+            data.Columns[6].HeaderText = "Thanh Toán";
         }
         //Chức năng tìm kiếm
         //Tìm kiếm hàng hóa
-        public int searchHangHoa(BunifuDataGridView data, string searchContent) {
+        public int searchHangHoa(Guna2DataGridView data, string searchContent) {
             if(objHangHoa.Search(strConnection, searchContent).Rows.Count > 0)
             {
                 data.DataSource = objHangHoa.Search(strConnection, searchContent);
@@ -73,7 +98,7 @@ namespace BTL.BUS
             }
         }
         //Tìm kiếm nhân viên
-        public int searchNhanVien(BunifuDataGridView data, string searchContent) {
+        public int searchNhanVien(Guna2DataGridView data, string searchContent) {
             if (objNhanVien.Search(strConnection, searchContent).Rows.Count > 0)
             {
                 data.DataSource = objNhanVien.Search(strConnection, searchContent);
@@ -85,7 +110,7 @@ namespace BTL.BUS
         }
 
         //Tìm kiếm hóa đơn
-        public int searchHoaDon(BunifuDataGridView data, string searchContent) {
+        public int searchHoaDon(Guna2DataGridView data, string searchContent) {
             if (objHoaDon.Search(strConnection, searchContent).Rows.Count > 0)
             {
                 data.DataSource = objHoaDon.Search(strConnection, searchContent);
@@ -97,7 +122,7 @@ namespace BTL.BUS
         }
 
         //Tìm kiếm khách hàng
-        public int searchKhachHang(BunifuDataGridView data, string searchContent) {
+        public int searchKhachHang(Guna2DataGridView data, string searchContent) {
             if (objKhachHang.Search(strConnection, searchContent).Rows.Count > 0)
             {
                 data.DataSource = objKhachHang.Search(strConnection, searchContent);
@@ -109,7 +134,7 @@ namespace BTL.BUS
         }
 
         //Thêm hàng hóa
-        public int addHangHoa(BunifuDataGridView data, string MaHang, string TenHang, string LoaiHang, string NhaCC, int Gia, int SoLuong) {
+        public int addHangHoa(Guna2DataGridView data, string MaHang, string TenHang, string LoaiHang, string NhaCC, int Gia, int SoLuong) {
             DAL.clsHangHoa_DAL.clsHangHoa_DAL thisObjHangHoa = new DAL.clsHangHoa_DAL.clsHangHoa_DAL(MaHang, TenHang, LoaiHang, NhaCC, Gia, SoLuong);
             thisObjHangHoa.Add(strConnection);
             data.DataSource = thisObjHangHoa.Get(strConnection);
@@ -117,7 +142,7 @@ namespace BTL.BUS
         }
 
         //Thêm Hóa Đơn
-        public int addHoaDon(BunifuDataGridView data, string MaHD, string MaHang, string MaNV, string MaKH, string NgayHD) {
+        public int addHoaDon(Guna2DataGridView data, string MaHD, string MaHang, string MaNV, string MaKH, string NgayHD) {
             DAL.clsHoaDon_DAL.clsHoaDon_DAL thisObjHoaDon = new DAL.clsHoaDon_DAL.clsHoaDon_DAL(MaHD, MaHang, MaNV, MaKH, NgayHD);
             thisObjHoaDon.Add(strConnection);
             data.DataSource = thisObjHoaDon.Get(strConnection);
@@ -125,7 +150,7 @@ namespace BTL.BUS
         }
 
         //Thêm khách hàng
-        public int addKhachHang(BunifuDataGridView data, string MaKH, string TenKH, string SDT, string DiaChi, int LuotMua, string GhiChu) {
+        public int addKhachHang(Guna2DataGridView data, string MaKH, string TenKH, string SDT, string DiaChi, int LuotMua, string GhiChu) {
             DAL.clsKhachHang_DAL.clsKhachHang_DAL thisObjKhachHang = new DAL.clsKhachHang_DAL.clsKhachHang_DAL(MaKH, TenKH, SDT, DiaChi, LuotMua, GhiChu);
             thisObjKhachHang.Add(strConnection);
             data.DataSource = thisObjKhachHang.Get(strConnection);
@@ -133,7 +158,7 @@ namespace BTL.BUS
         }
 
         //Thêm nhân viên
-        public int addNhanVien(BunifuDataGridView data, string MaNV, string TenNV, string SDT, string DiaChi) {
+        public int addNhanVien(Guna2DataGridView data, string MaNV, string TenNV, string SDT, string DiaChi) {
             DAL.clsNhanVien_DAL.clsNhanVien_DAL thisObjNhanVien = new DAL.clsNhanVien_DAL.clsNhanVien_DAL(MaNV, TenNV, SDT, DiaChi);
             thisObjNhanVien.Add(strConnection);
             data.DataSource = thisObjNhanVien.Get(strConnection);
@@ -141,7 +166,7 @@ namespace BTL.BUS
         }
 
         //Thêm hàng hóa
-        public int updateHangHoa(BunifuDataGridView data, string MaHang, string TenHang, string LoaiHang, string NhaCC, int Gia, int SoLuong) {
+        public int updateHangHoa(Guna2DataGridView data, string MaHang, string TenHang, string LoaiHang, string NhaCC, int Gia, int SoLuong) {
             DAL.clsHangHoa_DAL.clsHangHoa_DAL thisObjHangHoa = new DAL.clsHangHoa_DAL.clsHangHoa_DAL(MaHang, TenHang, LoaiHang, NhaCC, Gia, SoLuong);
             thisObjHangHoa.Update(strConnection);
             data.DataSource = thisObjHangHoa.Get(strConnection);
@@ -149,7 +174,7 @@ namespace BTL.BUS
         }
 
         //Thêm Hóa Đơn
-        public int updateHoaDon(BunifuDataGridView data, string MaHD, string MaHang, string MaNV, string MaKH, string NgayHD) {
+        public int updateHoaDon(Guna2DataGridView data, string MaHD, string MaHang, string MaNV, string MaKH, string NgayHD) {
             DAL.clsHoaDon_DAL.clsHoaDon_DAL thisObjHoaDon = new DAL.clsHoaDon_DAL.clsHoaDon_DAL(MaHD, MaHang, MaNV, MaKH, NgayHD);
             thisObjHoaDon.Update(strConnection);
             data.DataSource = thisObjHoaDon.Get(strConnection);
@@ -157,7 +182,7 @@ namespace BTL.BUS
         }
 
         //Thêm khách hàng
-        public int updateKhachHang(BunifuDataGridView data, string MaKH, string TenKH, string SDT, string DiaChi, int LuotMua, string GhiChu) {
+        public int updateKhachHang(Guna2DataGridView data, string MaKH, string TenKH, string SDT, string DiaChi, int LuotMua, string GhiChu) {
             DAL.clsKhachHang_DAL.clsKhachHang_DAL thisObjKhachHang = new DAL.clsKhachHang_DAL.clsKhachHang_DAL(MaKH, TenKH, SDT, DiaChi, LuotMua, GhiChu);
             thisObjKhachHang.Update(strConnection);
             data.DataSource = thisObjKhachHang.Get(strConnection);
@@ -165,7 +190,7 @@ namespace BTL.BUS
         }
 
         //Thêm nhân viên
-        public int updateNhanVien(BunifuDataGridView data, string MaNV, string TenNV, string SDT, string DiaChi) {
+        public int updateNhanVien(Guna2DataGridView data, string MaNV, string TenNV, string SDT, string DiaChi) {
             DAL.clsNhanVien_DAL.clsNhanVien_DAL thisObjNhanVien = new DAL.clsNhanVien_DAL.clsNhanVien_DAL(MaNV, TenNV, SDT, DiaChi);
             thisObjNhanVien.Update(strConnection);
             data.DataSource = thisObjNhanVien.Get(strConnection);
@@ -174,31 +199,34 @@ namespace BTL.BUS
 
         //Xóa Hàng Hóa
         //Thêm hàng hóa
-        public int deleteHangHoa(BunifuDataGridView data, string MaHang) {
-   
-            objHangHoa.Remove(strConnection, MaHang);
-            data.DataSource = objHangHoa.Get(strConnection);
+        public int deleteHangHoa(Guna2DataGridView data, string MaHang) {
+            DAL.clsHangHoa_DAL.clsHangHoa_DAL thisObjHangHoa = new DAL.clsHangHoa_DAL.clsHangHoa_DAL();
+            thisObjHangHoa.Remove(strConnection, MaHang);
+            data.DataSource = thisObjHangHoa.Get(strConnection);
             return 1;
         }
 
         //Thêm Hóa Đơn
-        public int deleteHoaDon(BunifuDataGridView data, string MaHD) {
-            objHoaDon.Remove(strConnection, MaHD);
-            data.DataSource = objHoaDon.Get(strConnection);
+        public int deleteHoaDon(Guna2DataGridView data, string MaHD) {
+            DAL.clsHoaDon_DAL.clsHoaDon_DAL thisObjHoaDon = new DAL.clsHoaDon_DAL.clsHoaDon_DAL();
+            thisObjHoaDon.Remove(strConnection, MaHD);
+            data.DataSource = thisObjHoaDon.Get(strConnection);
             return 1;
         }
 
         //Thêm khách hàng
-        public int deleteKhachHang(BunifuDataGridView data, string MaKH) {
-            objKhachHang.Remove(strConnection, MaKH);
-            data.DataSource = objKhachHang.Get(strConnection);
+        public int deleteKhachHang(Guna2DataGridView data, string MaKH) {
+            DAL.clsKhachHang_DAL.clsKhachHang_DAL thisObjKhachHang = new DAL.clsKhachHang_DAL.clsKhachHang_DAL();
+            thisObjKhachHang.Remove(strConnection, MaKH);
+            data.DataSource = thisObjKhachHang.Get(strConnection);
             return 1;
         }
 
         //Thêm nhân viên
-        public int deleteNhanVien(BunifuDataGridView data, string MaNV) {
-            objNhanVien.Remove(strConnection, MaNV);
-            data.DataSource = objNhanVien.Get(strConnection);
+        public int deleteNhanVien(Guna2DataGridView data, string MaNV) {
+            DAL.clsNhanVien_DAL.clsNhanVien_DAL thisObjNhanVien = new DAL.clsNhanVien_DAL.clsNhanVien_DAL();
+            thisObjNhanVien.Remove(strConnection, MaNV);
+            data.DataSource = thisObjNhanVien.Get(strConnection);
             return 1;
         }
     }

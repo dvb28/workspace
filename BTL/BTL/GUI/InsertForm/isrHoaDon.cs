@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Bunifu.UI.WinForms;
+using Guna.UI2.WinForms;
 namespace BTL.GUI.InsertForm {
     public partial class isrHoaDon : Form {
-        public BunifuDataGridView dvg = new BunifuDataGridView();
-        public isrHoaDon(BunifuDataGridView data) {
+        public Guna2DataGridView dvg = new Guna2DataGridView();
+        public isrHoaDon(Guna2DataGridView data) {
             InitializeComponent();
             loadHangHoa();
             loadNhanVien();

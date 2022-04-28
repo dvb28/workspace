@@ -41,8 +41,9 @@ namespace BTL.GUI
             }
         }
 
-        private void hanghoaLuuBtn_Click(object sender, EventArgs e) {
-
+        private void hanghoaSuaBtn_Click(object sender, EventArgs e) {
+            GUI.InsertForm.isrHangHoa isrHangHoa = new GUI.InsertForm.isrHangHoa(hanghoaTable);
+            isrHangHoa.ShowDialog();
         }
 
         private void hanghoaXoaBtn_Click(object sender, EventArgs e) {
@@ -50,7 +51,7 @@ namespace BTL.GUI
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    clsHangHoa_BUS.deleteHoaDon(hanghoaTable, hanghoaTable.CurrentRow.Cells["MaHang"].Value.ToString());
+                    clsHangHoa_BUS.deleteHangHoa(hanghoaTable, hanghoaTable.CurrentRow.Cells["MaHang"].Value.ToString());
                     MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

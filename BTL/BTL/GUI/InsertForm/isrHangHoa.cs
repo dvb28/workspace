@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
-
+using Guna.UI2.WinForms;
 namespace BTL.GUI.InsertForm {
     public partial class isrHangHoa : Form {
-        public BunifuDataGridView dtg = new BunifuDataGridView();
-        public isrHangHoa(BunifuDataGridView HangHoa) {
+        public Guna2DataGridView dtg = new Guna2DataGridView();
+        public isrHangHoa(Guna2DataGridView HangHoa) {
             InitializeComponent();
             loadLoaiHang();
             loadNhaCC();

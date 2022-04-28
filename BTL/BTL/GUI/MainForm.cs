@@ -15,6 +15,7 @@ namespace BTL.GUI
     public partial class MainForm : Form
     {
         public string strConnection;
+        static formDangNhapDangKy formDangNhapDangKy = new formDangNhapDangKy();
         //Khởi tạo các đối tượng trỏ đến form
         formHangHoa frHangHoa = new formHangHoa();
         nhanvienPanel frNhanVien = new nhanvienPanel();
@@ -22,6 +23,7 @@ namespace BTL.GUI
         formHoaDon frHoaDon = new formHoaDon();
         formLienHe frLienHe = new formLienHe();
         formDoanhThu frDoanhThu = new formDoanhThu();
+        //formDangNhapDangKy formDangNhapDangKy = new formDangNhapDangKy();
         //List chứa các Form
         List<Form> listForm = new List<Form>();
         private void addFormToList() { listForm.Add(frHangHoa); listForm.Add(frNhanVien); listForm.Add(frKhachHang); listForm.Add(frHoaDon); listForm.Add(frLienHe); listForm.Add(frDoanhThu); }
@@ -29,7 +31,6 @@ namespace BTL.GUI
         {
             InitializeComponent();
             addFormToList();
-        
         }
 
         //Form tùy ý sẽ thành form con của Form Main
@@ -106,6 +107,14 @@ namespace BTL.GUI
             hideForm(frLienHe);
             indicatorLine.Top = ((Control)sender).Top;
 
+        }
+
+        private void logOut_Click(object sender, EventArgs e) {
+            if(MessageBox.Show("Bạn muốn đăng xuất?", "Log Out", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                this.Hide();
+                formDangNhapDangKy.Show();
+            }
         }
     }
 }

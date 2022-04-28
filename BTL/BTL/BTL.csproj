@@ -300,6 +300,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="CrystalReport\ReportSample\BaoCaoHangHoa.doc" />
+    <None Include="CrystalReport\ReportSample\Mau_Khach_Hang.doc" />
+    <None Include="CrystalReport\ReportSample\Mau_Nhan_Vien.doc" />
     <None Include="CrystalReport\ReportSample\TRIOSHOP.doc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -320,6 +322,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="CSDL\BTL_QLBH.sql" />
     <Content Include="Img\Bg1.png" />
     <Content Include="Img\Bg2.png" />
     <Content Include="Img\Eyes-Fill.png" />

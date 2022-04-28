@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLienHe));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.indicatorLine = new System.Windows.Forms.PictureBox();
             this.lienheBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -44,6 +44,7 @@
             this.nhanhvienBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.khachhangBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).BeginInit();
             this.SuspendLayout();
@@ -106,11 +107,11 @@
             this.lienheBtn.ColorContrastOnClick = 45;
             this.lienheBtn.ColorContrastOnHover = 45;
             this.lienheBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.lienheBtn.CustomizableEdges = borderEdges1;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.lienheBtn.CustomizableEdges = borderEdges13;
             this.lienheBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.lienheBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.lienheBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -196,11 +197,11 @@
             this.trangchuBtn.ColorContrastOnClick = 45;
             this.trangchuBtn.ColorContrastOnHover = 45;
             this.trangchuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.trangchuBtn.CustomizableEdges = borderEdges2;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.trangchuBtn.CustomizableEdges = borderEdges14;
             this.trangchuBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.trangchuBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.trangchuBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -286,11 +287,11 @@
             this.hanghoaBtn.ColorContrastOnClick = 45;
             this.hanghoaBtn.ColorContrastOnHover = 45;
             this.hanghoaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.hanghoaBtn.CustomizableEdges = borderEdges3;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.hanghoaBtn.CustomizableEdges = borderEdges15;
             this.hanghoaBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.hanghoaBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.hanghoaBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -376,11 +377,11 @@
             this.hoadonBtn.ColorContrastOnClick = 45;
             this.hoadonBtn.ColorContrastOnHover = 45;
             this.hoadonBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.hoadonBtn.CustomizableEdges = borderEdges4;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.hoadonBtn.CustomizableEdges = borderEdges16;
             this.hoadonBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.hoadonBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.hoadonBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -466,11 +467,11 @@
             this.nhanhvienBtn.ColorContrastOnClick = 45;
             this.nhanhvienBtn.ColorContrastOnHover = 45;
             this.nhanhvienBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.nhanhvienBtn.CustomizableEdges = borderEdges5;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.nhanhvienBtn.CustomizableEdges = borderEdges17;
             this.nhanhvienBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.nhanhvienBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.nhanhvienBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -556,11 +557,11 @@
             this.khachhangBtn.ColorContrastOnClick = 45;
             this.khachhangBtn.ColorContrastOnHover = 45;
             this.khachhangBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.khachhangBtn.CustomizableEdges = borderEdges6;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.khachhangBtn.CustomizableEdges = borderEdges18;
             this.khachhangBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.khachhangBtn.DisabledBorderColor = System.Drawing.Color.Empty;
             this.khachhangBtn.DisabledFillColor = System.Drawing.Color.White;
@@ -641,6 +642,15 @@
             this.bunifuPanel2.Size = new System.Drawing.Size(209, 65);
             this.bunifuPanel2.TabIndex = 28;
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = null;
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog1.Parent = this;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog1.Text = null;
+            // 
             // formLienHe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -651,6 +661,7 @@
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Name = "formLienHe";
             this.Text = "formLienHe";
+            this.Load += new System.EventHandler(this.formLienHe_Load);
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorLine)).EndInit();
             this.ResumeLayout(false);
@@ -668,5 +679,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 nhanhvienBtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 khachhangBtn;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
     }
 }

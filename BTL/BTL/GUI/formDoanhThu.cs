@@ -24,7 +24,7 @@ namespace BTL.GUI {
         SqlCommand cmd;
         SqlDataReader dr;
         private void formDoanhThu_Load(object sender, EventArgs e) {
-            clsBridge_BUS.loadTopNhanVien(chartTopNhanVien);
+            clsBridge_BUS.loadTopHang(chartTopNhanVien);
             clsBridge_BUS.loadDashboard(lbHangHoa, lbHoaDon, lbKhachHang, lbNhanVien, lbDoanhThu);
             clsBridge_BUS.loadChart(chartDoanhThu, listMonth, listDoanhThu);
             clsBridge_BUS.loadBestStafff(lbDoanhSoNhanVien, lbdoanhssNVNum);

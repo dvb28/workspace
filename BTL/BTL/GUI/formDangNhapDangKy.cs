@@ -73,7 +73,7 @@ namespace BTL
             ListPics.Add(bunifuPictureBox1);
             //Dùng trong Form Login
             ListLoginBoxs.Add(bunifuTextBox5); ListLoginBoxs.Add(bunifuTextBox6);
-            ListLoginBtns.Add(bunifuIconButton5); ListLoginBtns.Add(bunifuIconButton4);
+            ListLoginBtns.Add(exitBtn); ListLoginBtns.Add(bunifuIconButton4);
             ListLoginLabels.Add(label2); ListLoginLabels.Add(label1);
             ListLoginUserControls.Add(bunifuUserControl5);ListLoginUserControls.Add(bunifuUserControl4);
             ListLoginEmptyErrorMessage.Add(bunifuLabel8); ListLoginEmptyErrorMessage.Add(bunifuLabel10);
@@ -305,10 +305,10 @@ namespace BTL
             {
                 if (ListLoginBoxs[0].Text == userName && ListLoginBoxs[1].Text == userPassword)
                 {
+                    this.Hide();
                     Home.ShowDialog();
                     ListLoginEmptyErrorMessage[0].Text = "Tài khoản không thể để trống";
                     ListLoginEmptyErrorMessage[1].Text = "Mật khẩu không thể để trống";
-                    this.Hide();
                 }
                 else
                 {
@@ -411,6 +411,11 @@ namespace BTL
         private void bunifuLabel9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuIconButton9_Click(object sender, EventArgs e) {
+            this.Close();
+            Application.Exit();
         }
     }
 }

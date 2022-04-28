@@ -8,7 +8,10 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Aspose.Words;
+using Aspose.Words.Tables;
+using Lib.Report.AsposeWordExtension;
+using Guna.UI2.WinForms;
 namespace BTL.GUI
 {
     public partial class formKhachHang : Form
@@ -56,10 +59,36 @@ namespace BTL.GUI
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    clsKhachHang_BUS.deleteHoaDon(khachhangTable, khachhangTable.CurrentRow.Cells["MaKH"].Value.ToString());
+                    clsKhachHang_BUS.deleteKhachHang(khachhangTable, khachhangTable.CurrentRow.Cells["MaKH"].Value.ToString());
                     MessageBox.Show("Xóa thành công!", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void xuatKhachHang_Click(object sender, EventArgs e) {
+            if (MessageBox.Show($"Bạn muốn xuất thông tin khách hàng?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Document hanghoaBaoCao = new Document($@"..\..\CrystalReport\ReportSample\Mau_Khach_Hang.doc");
+                Table hanghoaTb = hanghoaBaoCao.GetChild(NodeType.Table, 0, true) as Table;
+                int currentRow = 1;
+                hanghoaTb.InsertRows(currentRow, currentRow, (khachhangTable.Rows.Count - 1));
+                for (int i = 0; i < khachhangTable.Rows.Count; i++)
+                {
+                    hanghoaTb.PutValue(currentRow, 0, khachhangTable.Rows[i].Cells["MaKH"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 1, khachhangTable.Rows[i].Cells["TenKH"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 2, khachhangTable.Rows[i].Cells["SDT"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 3, khachhangTable.Rows[i].Cells["DiaChi"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 4, khachhangTable.Rows[i].Cells["LuotMua"].Value.ToString());
+                    hanghoaTb.PutValue(currentRow, 5, khachhangTable.Rows[i].Cells["GhiChu"].Value.ToString());
+                    currentRow++;
+                }
+                hanghoaBaoCao.SaveAndOpenFile("BaoCaoKhachHang.pdf");
+            }
+        }
+
+        private void khachhangLuuBtn_Click(object sender, EventArgs e) {
+            GUI.InsertForm.isrKhachHang isrKhachHang = new GUI.InsertForm.isrKhachHang(khachhangTable);
+            isrKhachHang.ShowDialog();
         }
     }
 }

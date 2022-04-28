@@ -79,5 +79,10 @@ namespace BTL.GUI
                 }
             }
         }
+
+        private void hanghoaLuuBtn_Click(object sender, EventArgs e) {
+            GUI.InsertForm.isrHoaDon isrHoaDon = new GUI.InsertForm.isrHoaDon(hoadonTable);
+            isrHoaDon.ShowDialog();
+        }
     }
 }
