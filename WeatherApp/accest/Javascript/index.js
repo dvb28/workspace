@@ -12,6 +12,7 @@ const wind = $('.wind');
 const humidity  = $('.humidity');
 const pressure = $('.pressure');
 const search = $('input');
+const searchIcon = $('.search--icon');
 //Code
 var app = {
     getDataAPI: function(cityName) {
@@ -63,6 +64,9 @@ var app = {
                 app.getDataAPI(search.value.trim());
             }
         })
+        searchIcon.onclick = function(e) {
+            app.getDataAPI(search.value.trim());
+        }
     },
     start: function() {
         this.getDataAPI('ha noi');
