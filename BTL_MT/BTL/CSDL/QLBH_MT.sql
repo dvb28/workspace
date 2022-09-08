@@ -1,4 +1,4 @@
-﻿CREATE DATABASE QLBH_MT;
+CREATE DATABASE QLBH_MT;
 GO
 USE  QLBH_MT;
 go
@@ -533,6 +533,7 @@ go
 
 --Doanh thu theo tháng
 create procedure sp_DoanhThuThang as
+exec sp_updateThanhToan
 select CONCAT('T', max(month(NgayHD))) as 'Thang',CONCAT(SUM(ThanhToan),'') as 'Doanh Thu' from HoaDon
 group by MONTH(NgayHD)
 go
@@ -574,3 +575,6 @@ else
 end
 go
 exec sp_insertTaiKhoan 'NuNu', '221221', '9012352923'
+
+
+exec sp_showHoaDon
