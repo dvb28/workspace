@@ -89,33 +89,33 @@ insert into TaiKhoan values	('daovietbao','221221','0987667556'),
 SELECT * FROM TaiKhoan
 
 ----------------------- Bảng nhà cung cấp ------------------------
-insert into NhaCC values ('CC01',N'Acer'),
-						('CC02',N'MSI'),
-						('CC03',N'Asus'),
-						('CC04',N'Apple'),
-						('CC05',N'Dell'),
-						('CC06',N'HP'),
-						('CC07',N'Acer');
+insert into NhaCC values ('CC01',N'TP Tấn Tài'),
+						('CC02',N'Bách Hóa Xanh'),
+						('CC03',N'TP Vĩnh Phát'),
+						('CC04',N'TP Trung Hiếu'),
+						('CC05',N'TP Trần Văn Hùng'),
+						('CC06',N'TP Hoàng Đông'),
+						('CC07',N'TP Việt Bảo');
 SELECT * FROM NhaCC;
 
 ----------------------- Bảng phân loại ----------------------------
-insert into PhanLoai values	('PL01',N'Màn Hình Máy Tính'),
-							('PL02',N'Laptop'),
-							('PL03',N'Case Máy Tính'),
-							('PL04',N'Ghế Gaming'),
-							('PL05',N'Card Đồ Họa'),
-							('PL06',N'Bàn Phím Cơ'),
-							('PL07',N'Tai Nghe Gaming')
+insert into PhanLoai values	('PL01',N'Thịt'),
+							('PL02',N'Rau củ'),
+							('PL03',N'Hải sản'),
+							('PL04',N'Trái cây'),
+							('PL05',N'Đồ ăn nhanh'),
+							('PL06',N'Đồ đóng hộp'),
+							('PL07',N'Nông sản')
 SELECT * FROM PhanLoai;
 
 ---------------------- Bảng hàng hóa --------------------------------
-insert into HangHoa values	('H01','PL02','CC06',N'Laptop Acer Nitro 5',330,10),
-							('H02','PL03','CC01',N'HP 205 Pro G4 AIO R5',1200,7),
-							('H03','PL05','CC06',N'Phím Cơ E-Dra EK387',120,15),
-							('H04','PL06','CC05',N'NVIDIA GTX 1650',120,15),
-							('H05','PL05','CC07',N'Tai Nghe Rapoo VH160',120,15),
-							('H06','PL02','CC02',N'Laptop ROG Strix Scar 17',120,15),
-							('H07','PL05','CC03',N'NVIDIA GTX 1050',110,100)
+insert into HangHoa values	('H01','PL02','CC06',N'Rau muống',330,10),
+							('H02','PL03','CC01',N'Xà lách',1200,7),
+							('H03','PL05','CC06',N'Cải thảo',120,15),
+							('H04','PL06','CC05',N'Cà rốt',120,15),
+							('H05','PL05','CC07',N'Bò Waifu',120,15),
+							('H06','PL02','CC02',N'Bò Kobe',120,15),
+							('H07','PL05','CC03',N'Thịt lợn sạch',110,100)
 SELECT * FROM HangHoa;
 
 ---------------------- Bảng nhân viên --------------------------------
